@@ -1,0 +1,17 @@
+close_garage:
+  sequence:
+  - event: LOGBOOK_ENTRY
+    event_data:
+      name: EVENT
+      message: "HASS: Closing Garage"
+  - condition: state
+    entity_id: cover.garage_door
+    state: "open"
+  - service: cover.close_cover
+    entity_id: cover.garage_door
+  
+  #- service: homeassistant.turn_on
+  #  entity_id: script.garage_alarm
+  #- service: switch.turn_on
+  #  data:
+  #    entity_id: switch.garage_alarm

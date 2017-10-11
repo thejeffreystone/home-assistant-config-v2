@@ -1,0 +1,12 @@
+security_sound_alarm:
+  sequence:
+  - event: LOGBOOK_ENTRY
+    event_data:
+      name: EVENT
+      message: "Sounding Security Alarm"
+  - delay:
+      seconds: 80
+  - condition: state
+    entity_id: sensor.family_status
+    state: 'away' 
+  - service: shell_command.security_alarm

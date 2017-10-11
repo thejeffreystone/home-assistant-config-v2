@@ -1,0 +1,39 @@
+- platform: template
+  sensors:
+    garage_door:
+      friendly_name: Garage Door
+      unit_of_measurement: ''
+      value_template: >-
+          {%- if is_state("sensor.garage_door_contact", "open") %}
+                Open
+            {% elif is_state("sensor.garage_door_contact", "closed") %}
+                Closed
+            {% else %}
+                Unknown
+            {%- endif %}
+      icon_template: >-
+        {%- if is_state("sensor.garage_door_contact", "closed") %}
+          mdi:garage
+        {%- elif is_state("sensor.garage_door_contact", "open") %}
+          mdi:garage-open
+        {% else %}
+          mdi:sync-alert
+        {%- endif %}
+- platform: mqtt
+  name: "Zone 3"
+  state_topic: "smartthings/Zone 3/contact"
+  payload_on: "open"
+  payload_off: "closed"
+  retain: true
+- platform: mqtt
+  name: "Kitchen Smoke"
+  state_topic: "smartthings/Kitchen Smoke/smoke"
+  payload_on: "smoke"
+  payload_off: "clear"
+  retain: true
+- platform: mqtt
+  name: "Garage Door Contact"
+  state_topic: "smartthings/Garage Door/contact"
+  payload_on: "open"
+  payload_off: "closed"
+  retain: true

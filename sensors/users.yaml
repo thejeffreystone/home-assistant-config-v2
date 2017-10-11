@@ -1,0 +1,8 @@
+- platform: mqtt
+  name: "Jeff Destination"
+  state_topic: "jeff/driving/destination"
+- platform: mqtt
+  name: "Jeff Status"
+  state_topic: "jeff/location/status"
+
+

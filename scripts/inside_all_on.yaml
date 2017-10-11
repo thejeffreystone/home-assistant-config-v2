@@ -1,0 +1,15 @@
+inside_all_on:
+  sequence:
+  - event: LOGBOOK_ENTRY
+    event_data:
+      name: EVENT
+      message: "Turning inside lights on."
+  - service: light.turn_on
+    data:
+      entity_id: light.tower_lamp
+  - service: switch.turn_on
+    data:
+      entity_id: switch.strip_cord_1
+  - service: scene.turn_on
+    data:
+      entity_id: scene.livingroom_normal

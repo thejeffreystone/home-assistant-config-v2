@@ -1,0 +1,15 @@
+security_check_verified:
+  sequence:
+  - condition: state
+    entity_id: sensor.garage_door_contact
+    state: "Closed"
+  - condition: state
+    entity_id: sensor.zone_status
+    state: "Closed"
+  - service: notify.jeff_ios
+    data:
+      message: "SECURITY: Lockdown procedures Complete"
+  - service: homeassistant.turn_off
+    entity_id: script.security_check_zones
+  - service: homeassistant.turn_off
+    entity_id: script.security_check_garage

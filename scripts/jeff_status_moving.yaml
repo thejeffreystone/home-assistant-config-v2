@@ -1,0 +1,7 @@
+jeff_status_moving:
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: "jeff/location/status"
+        payload: "Moving"
+        retain: true

@@ -1,0 +1,26 @@
+#
+#
+# Events
+#
+############
+
+- alias: Trash Morning Notification
+  trigger:
+  - platform: time
+    hours: 6
+    minutes: 0
+    seconds: 0
+  condition:
+  - condition: time
+    weekday:
+    - tue
+  - condition: state
+    entity_id: input_boolean.vacation_mode
+    state: 'off'
+  - condition: state
+    entity_id: input_boolean.trash_notification
+    state: 'on'
+  action:
+  - service: notify.all_ios
+    data:
+      message: Don't forget to it is Trash Day

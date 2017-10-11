@@ -1,0 +1,10 @@
+.*
+known_devices.yaml
+secrets.yaml
+*.log
+*.db
+icloud/
+www/
+tts/
+deps/
+!.gitignore

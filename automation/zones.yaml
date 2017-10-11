@@ -1,0 +1,33 @@
+
+#
+#
+# Zone Automations
+#
+#
+#####################
+
+- alias: Zone 3 Opened
+  trigger:
+  - platform: state
+    entity_id: sensor.zone_3
+    from: closed
+    to: open
+  condition:
+  - condition: state
+    entity_id: input_boolean.audible_notifications
+    state: 'on'
+  action:
+  - service: shell_command.door_chime
+
+- alias: Zone 3 Closed
+  trigger:
+  - platform: state
+    entity_id: sensor.zone_3
+    from: open
+    to: closed
+  condition:
+  - condition: state
+    entity_id: input_boolean.audible_notifications
+    state: 'on'
+  action:
+  - service: shell_command.door_chime

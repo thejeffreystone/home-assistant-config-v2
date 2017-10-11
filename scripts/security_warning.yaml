@@ -1,0 +1,13 @@
+security_warning:
+  sequence:
+  - event: LOGBOOK_ENTRY
+    event_data:
+      name: EVENT
+      message: "Security Warning: Possible Unauthorized Access"
+  #- service: notify.jeff_ios
+  #  data:
+  #    message: 'Security Warning: Possible Unauthorized Access'
+  - service: tts.google_say
+    data:
+      entity_id: media_player.hass_speaker
+      message: Pardon me, but I have detected unauthorized access. Attempting to verify. Alarm will sound in 80 seconds. 

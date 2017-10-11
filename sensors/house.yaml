@@ -1,0 +1,7 @@
+- platform: mqtt
+  name: "Family Status"
+  state_topic: "house/family/status"
+  payload_on: "home"
+  payload_off: "away"
+  retain: true
+  
