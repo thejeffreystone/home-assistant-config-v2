@@ -35,37 +35,37 @@ Currently I am running HA on a Raspberry Pi 3.
 **Automations:**
 ```
 Daily:
-    These are daily automations like turning on lights at sunset, and turning them off at sunrise.
+These are daily automations like turning on lights at sunset, and turning them off at sunrise.
 
-Events
-    These are based on reoccuring events like Trash notifications.
+Events:
+These are based on reoccuring events like Trash notifications.
 
 Garage:
-    These are based on the garage door opening and closing and include things like turning on the driveway lights 
-    if the sun is below the horizon or notifying us if the garage door is open and the sun has set or notifying us
-    that the garage door failed to close
+These are based on the garage door opening and closing and include things like turning on the driveway lights 
+if the sun is below the horizon or notifying us if the garage door is open and the sun has set or notifying us
+that the garage door failed to close
 
 Media:
-    These are around the media player and will fire scenes based on when the Apple Tv starts playing or pauses.
+These are around the media player and will fire scenes based on when the Apple Tv starts playing or pauses.
 
 Notifications:
-	Notifications are sent out when people come or go. Most of them are audible in the house, but some are text based
+Notifications are sent out when people come or go. Most of them are audible in the house, but some are text based
 
 Presence:
-	The automations fire when we leave or arrive or around individuals travel. These are typically not notifications, but may 
-	set statuses that fire other automations.
+The automations fire when we leave or arrive or around individuals travel. These are typically not notifications, but may 
+set statuses that fire other automations.
 
 Security:
-	These are all security related and mostly relate to sounding alarms when doors open while the security system is armed. 
+These are all security related and mostly relate to sounding alarms when doors open while the security system is armed. 
 
 Transit:
-	These are all based on when someone leaves work and simply provides an ETA home.
+These are all based on when someone leaves work and simply provides an ETA home.
 
 Weather:
-	Weather based automations that include sounding a tornado alarm. 
+Weather based automations that include sounding a tornado alarm. 
 
 Zones:
-	These are all based on sensors that are connected to an old security system and monitor doors and windows. 
+These are all based on sensors that are connected to an old security system and monitor doors and windows. 
 
 ```
 
@@ -75,7 +75,6 @@ Zones:
 * Put Door Sensor in Mailbox
 * Add RGB LED Bulbs to the lamps in the bedrooms and living areas
 * Add Motion detectors
-* Add door sensors
-* ~~Integrate with Google Maps to provide traffic and ETA for daily driving routes~~
+* Add more door sensors
 * Add Smart locks to ensure all doors are locked.
 * Replace other Smoke Detectors with Z-Wave Detectors.
