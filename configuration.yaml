@@ -165,6 +165,9 @@ climate:
   region: us
   scan_interval: 600
 
+alexa:
+  
+
 ### Custom Commands
 
 shell_command:
