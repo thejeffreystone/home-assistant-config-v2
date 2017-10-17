@@ -140,6 +140,20 @@ zone 4:
   radius: 200
   icon: mdi:office
 
+zone 4:
+  name: Gump
+  latitude: 33.89261183797744
+  longitude: -83.96071630537878
+  radius: 200
+  icon: mdi:school
+
+zone 6:
+  name: Pottery
+  latitude: 33.987571
+  longitude: -84.0951167
+  radius: 100
+  icon: mdi:palette
+
 ### Devices and Services
 
 ifttt:
