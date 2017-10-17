@@ -20,8 +20,8 @@
           mdi:sync-alert
         {%- endif %}
 - platform: mqtt
-  name: "Zone 3"
-  state_topic: "smartthings/Zone 3/contact"
+  name: "Back Door"
+  state_topic: "smartthings/Back Door/contact"
   payload_on: "open"
   payload_off: "closed"
   retain: true
@@ -34,6 +34,18 @@
 - platform: mqtt
   name: "Garage Door Contact"
   state_topic: "smartthings/Garage Door/contact"
+  payload_on: "open"
+  payload_off: "closed"
+  retain: true
+- platform: mqtt
+  name: "Front Door"
+  state_topic: "smartthings/Front Door/contact"
+  payload_on: "open"
+  payload_off: "closed"
+  retain: true
+- platform: mqtt
+  name: "Laundry Room Door"
+  state_topic: "smartthings/Laundry Room Door/contact"
   payload_on: "open"
   payload_off: "closed"
   retain: true

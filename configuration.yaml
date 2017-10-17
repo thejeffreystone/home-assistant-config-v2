@@ -104,7 +104,7 @@ sensor: !include_dir_merge_list sensors
 light: !include_dir_merge_list lights
 switch: !include_dir_merge_list switches
 script: !include_dir_merge_named scripts/
-alexa: !include alexa/intents.yaml
+intent_script: !include intents/intents.yaml
 scene: !include scenes.yaml
 input_select: !include input_select.yaml
 input_boolean: !include input_boolean.yaml
@@ -166,7 +166,7 @@ climate:
   scan_interval: 600
 
 alexa:
-  
+
 
 ### Custom Commands
 

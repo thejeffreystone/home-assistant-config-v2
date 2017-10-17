@@ -64,29 +64,14 @@
     zone: zone.home
   action:
   - service: script.jeff_destination_arrived
-  - service: script.jeff_status_home
 
 - alias: Jeff Arrives Home Audible
   trigger:
   - platform: state
-    entity_id: sensor.jeff_status
+    entity_id: sensor.jeffrey_location
     to: home
   action:
   - service: script.jeff_is_home_audible
-
-
-- alias: Jeff Leaves Home
-  trigger:
-  - entity_id: device_tracker.jeffreystonesiphone
-    event: leave
-    platform: zone
-    zone: zone.home
-  - entity_id: device_tracker.owntracks_jeffreystonesiphone
-    event: leave
-    platform: zone
-    zone: zone.home
-  action:
-  - service: script.jeff_status_moving
 
 
 - alias: Jeff Arrives At Summit
@@ -95,27 +80,14 @@
     event: enter
     platform: zone
     zone: zone.summit
-  - entity_id: device_tracker.owntracks_jeffreystonesiphone
-    event: enter
-    platform: zone
-    zone: zone.summit
+  # - entity_id: device_tracker.owntracks_jeffreystonesiphone
+  #   event: enter
+  #   platform: zone
+  #   zone: zone.summit
   action:
   - service: script.jeff_destination_arrived
-  - service: script.jeff_status_work
   - service: script.jeff_at_work_notification
 
-- alias: Jeff Leaves Summit
-  trigger:
-  - entity_id: device_tracker.jeffreystonesiphone
-    event: leave
-    platform: zone
-    zone: zone.summit
-  - entity_id: device_tracker.owntracks_jeffreystonesiphone
-    event: leave
-    platform: zone
-    zone: zone.summit
-  action:
-  - service: script.jeff_status_moving
 
 - alias: Kat Arrives Home Notification
   trigger:

@@ -4,8 +4,8 @@ security_check_verified:
     entity_id: sensor.garage_door_contact
     state: "Closed"
   - condition: state
-    entity_id: sensor.zone_status
-    state: "Closed"
+    entity_id: group.doors
+    state: "closed"
   - service: notify.jeff_ios
     data:
       message: "SECURITY: Lockdown procedures Complete"

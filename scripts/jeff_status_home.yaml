@@ -1,9 +1,0 @@
-jeff_status_home:
-  sequence:
-    - service: mqtt.publish
-      data:
-        topic: "jeff/location/status"
-        payload: "Home"
-        retain: true
-
-    

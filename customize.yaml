@@ -92,7 +92,7 @@ device_tracker.owntracks_jeffreystonesiphone:
   entity_picture: !secret JEFF_ICON
   friendly_name: Jeff
 
-sensor.jeff_status:
+sensor.jeffrey_location:
   #icon: mdi:human-male
   entity_picture: !secret JEFF_ICON
   friendly_name: Jeff

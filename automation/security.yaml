@@ -20,7 +20,7 @@
     seconds: 0
   condition:
   - condition: state
-    entity_id: sensor.jeff_status
+    entity_id: sensor.jeffrey_location
     state: 'home'
   - condition: state
     entity_id: group.katherine
@@ -172,7 +172,7 @@
 - alias: Late Arrival Lockdown
   trigger:
   - platform: state
-    entity_id: sensor.jeff_status
+    entity_id: sensor.jeffrey_location
     to: 'home'
   - platform: state
     entity_id: group.katherine

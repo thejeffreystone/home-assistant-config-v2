@@ -1,9 +1,0 @@
-jeff_status_arrived:
-  sequence:
-    - service: mqtt.publish
-      data:
-        topic: "jeff/location/status"
-        payload: "Arrived"
-        retain: true
-
-    

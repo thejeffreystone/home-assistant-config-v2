@@ -83,7 +83,7 @@ Security Status:
   - sensor.pws_alerts
   - sensor.security_status
   - sensor.garage_door
-  - sensor.zone_3
+  - group.doors
   - sensor.smoke_kitchen
 
 House:
@@ -92,12 +92,17 @@ House:
   - sensor.garage_door
   - climate.first_floor
 
+Doors:
+  - sensor.back_door
+  - sensor.front_door
+  - sensor.laundry_room_door
+
 Family:
   - device_tracker.owntracks_jeffreystonesiphone
   - device_tracker.katherinestonesiphone
 
 Jeffrey:
-  - sensor.jeff_status
+  - sensor.jeffrey_location
   - sensor.jeff_iphone_batt
   - sensor.jeff_destination
   - sensor.jeff_ett_home

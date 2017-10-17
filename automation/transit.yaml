@@ -17,7 +17,7 @@
 - alias: Jeff no destination
   trigger:
   - platform: state
-    entity_id: sensor.jeff_status
+    entity_id: sensor.jeffrey_location
     to: Moving
   condition:
   - condition: state

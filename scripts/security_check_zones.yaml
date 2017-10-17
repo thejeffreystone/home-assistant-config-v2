@@ -5,7 +5,7 @@ security_check_zones:
       name: EVENT
       message: "SECURITY: Performing Security check - Zones"
   - condition: state
-    entity_id: sensor.zone_status
+    entity_id: group.doors
     state: "Open"
   - delay:
       seconds: 20

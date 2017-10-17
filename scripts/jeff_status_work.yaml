@@ -1,9 +1,0 @@
-jeff_status_work:
-  sequence:
-    - service: mqtt.publish
-      data:
-        topic: "jeff/location/status"
-        payload: "Summit"
-        retain: true
-
-    
