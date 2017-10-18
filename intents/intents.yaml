@@ -71,7 +71,7 @@ JeffETRHome:
   speech:
     type: plain
     text: >
-      {%- if is_state('device_tracker.jeffreystonesiphone', 'home') -%}
+      {%- if is_state('device_tracker.owntracks_jeffreystonesiphone', 'home') -%}
         It appears Jeff is home
       {%- else -%}        
         Jeff will be home in {{states.sensor.jeff_ett_home.attributes.duration_in_traffic}}
@@ -95,8 +95,22 @@ WhereIsJeff:
         Jeff is here somewhere. Where was the last place you saw him?
       {%- else -%}
         {%- if is_state('sensor.jeffrey_location', 'moving') -%}
-          Jeff is currently inbetween stops
+          Jeff is currently inbetween stops and could be home in {{states.sensor.jeff_ett_home.attributes.duration_in_traffic}}
         {%- else -%}
           Jeff is at {{ states("sensor.jeffrey_location") }}
+        {% endif %}
+      {% endif %}
+
+WhereIsKat:
+  speech:
+    type: plain
+    text: >
+      {%- if is_state('device_tracker.katherinestonesiphone', 'home') -%}
+        Katherine is here.
+      {%- else -%}
+        {%- if is_state('device_tracker.katherinestonesiphone', 'not_home') -%}
+          Katherine is currently inbetween stops and could be home in {{states.sensor.kat_ett_home.attributes.duration_in_traffic}}
+        {%- else -%}
+          Katherine is at {{ states.device_tracker.katherinestonesiphone.state }}
         {% endif %}
       {% endif %}
