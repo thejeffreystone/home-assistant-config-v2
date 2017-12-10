@@ -4,17 +4,17 @@
       friendly_name: Garage Door
       unit_of_measurement: ''
       value_template: >-
-          {%- if is_state("sensor.garage_door_contact", "open") %}
+          {%- if is_state("cover.garage_door", "open") %}
                 Open
-            {% elif is_state("sensor.garage_door_contact", "closed") %}
+            {% elif is_state("cover.garage_door", "closed") %}
                 Closed
             {% else %}
                 Unknown
             {%- endif %}
       icon_template: >-
-        {%- if is_state("sensor.garage_door_contact", "closed") %}
+        {%- if is_state("cover.garage_door", "closed") %}
           mdi:garage
-        {%- elif is_state("sensor.garage_door_contact", "open") %}
+        {%- elif is_state("cover.garage_door", "open") %}
           mdi:garage-open
         {% else %}
           mdi:sync-alert
@@ -48,4 +48,16 @@
   state_topic: "smartthings/Laundry Room Door/contact"
   payload_on: "open"
   payload_off: "closed"
+  retain: true
+- platform: mqtt
+  name: "Kat Presence"
+  state_topic: "smartthings/Kat/presence"
+  payload_on: "present"
+  payload_off: "not present"
+  retain: true
+- platform: mqtt
+  name: "Jeff Presence"
+  state_topic: "smartthings/Jeffrey/presence"
+  payload_on: "present"
+  payload_off: "not present"
   retain: true

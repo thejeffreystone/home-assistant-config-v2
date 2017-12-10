@@ -63,3 +63,6 @@ security_issue:
 kat_heading_home:
   name: Kat Heading Home
   icon: mdi:car
+jeff_heading_home:
+  name: Jeff Heading Home
+  icon: mdi:car

@@ -27,9 +27,7 @@
     entity_id: sensor.garage_door_contact
     state: open
   action:
-  - service: input_boolean.turn_on
-    data:
-      entity_id: input_boolean.garage_issue
+  - service: script.driveway_on
 
 - alias: Garage Closed
   trigger:
@@ -42,7 +40,6 @@
     data:
       entity_id: input_boolean.garage_issue
     
-
 - alias: Garage Issue
   trigger:
   - platform: state

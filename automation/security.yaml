@@ -20,7 +20,7 @@
     seconds: 0
   condition:
   - condition: state
-    entity_id: sensor.jeffrey_location
+    entity_id: group.jeffrey
     state: 'home'
   - condition: state
     entity_id: group.katherine

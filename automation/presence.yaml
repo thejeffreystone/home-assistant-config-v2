@@ -8,7 +8,7 @@
 
 - alias: Family Has arrived
   trigger:
-  - entity_id: sensor.family_status
+  - entity_id: sensor.family_presence
     from: away
     platform: state
     to: home
@@ -18,46 +18,46 @@
 
 - alias: Family Has Left
   trigger:
-  - entity_id: sensor.family_status
+  - entity_id: sensor.family_presence
     from: home
     platform: state
     to: away
+  condition:
+  - condition: state
+    entity_id: input_boolean.guest_mode
+    state: 'off'
   action:
   - service: script.close_garage
   - service: script.lockdown
 
-# - alias: Family Devices Have arrived
-#   trigger:
-#   - entity_id: group.family
-#     from: not_home
-#     platform: state
-#     to: home
-#   condition:
-#   - condition: state
-#     entity_id: sensor.family_status
-#     state: 'away'
-#   action:
-#   - service: script.family_is_home
+- alias: Family Devices Have arrived
+  trigger:
+  - entity_id: group.family
+    from: not_home
+    platform: state
+    to: home
+  condition:
+  - condition: state
+    entity_id: sensor.family_status
+    state: 'away'
+  action:
+  - service: script.family_is_home
 
-# - alias: Family Devices Have Left
-#   trigger:
-#   - entity_id: group.family
-#     from: home
-#     platform: state
-#     to: not_home
-#   condition:
-#   - condition: state
-#     entity_id: sensor.family_status
-#     state: 'home'
-#   action:
-#   - service: script.family_is_away
+#- alias: Family Devices Have Left
+#  trigger:
+#  - entity_id: group.family
+#    from: home
+#    platform: state
+#    to: not_home
+#  condition:
+#  - condition: state
+#    entity_id: sensor.family_status
+#    state: 'home'
+#  action:
+#  - service: script.family_is_away
 
 - alias: Jeff Arrives Home
   trigger:
-  - entity_id: device_tracker.jeffreystonesiphone
-    event: enter
-    platform: zone
-    zone: zone.home
   - entity_id: device_tracker.owntracks_jeffreystonesiphone
     event: enter
     platform: zone
@@ -67,23 +67,22 @@
 
 - alias: Jeff Arrives Home Audible
   trigger:
-  - platform: state
-    entity_id: sensor.jeffrey_location
-    to: home
+  - entity_id: device_tracker.owntracks_jeffreystonesiphone
+    event: enter
+    platform: zone
+    zone: zone.home
   action:
   - service: script.jeff_is_home_audible
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.jeff_heading_home
 
 
 - alias: Jeff Arrives At Summit
   trigger:
-  - entity_id: device_tracker.jeffreystonesiphone
+  - entity_id: device_tracker.owntracks_jeffreystonesiphone
     event: enter
     platform: zone
     zone: zone.summit
-  # - entity_id: device_tracker.owntracks_jeffreystonesiphone
-  #   event: enter
-  #   platform: zone
-  #   zone: zone.summit
   action:
   - service: script.jeff_destination_arrived
   - service: script.jeff_at_work_notification

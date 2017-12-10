@@ -8,5 +8,5 @@ driveway_on:
       entity_id: switch.driveway_light
   - service: switch.turn_on
     data:
-      entity_id: switch.side_door_light
+      entity_id: switch.side_door
   

@@ -14,6 +14,9 @@
   action:
   - service: scene.turn_on
     entity_id: scene.livingroom_normal
+  - service: switch.turn_on
+    data:
+      entity_id: switch.strip_cord_1
   - service: notify.ios_jeffreystonesiphone
     data:
       message: Good Morning, Anchorage House is up and online.
@@ -76,5 +79,6 @@
   trigger:
   - platform: sun
     event: sunrise
+    offset: 00:30:00
   action:
   - service: script.inside_all_off

@@ -87,7 +87,7 @@ Security Status:
   - sensor.smoke_kitchen
 
 House:
-  - sensor.family_status
+  - sensor.family_presence
   - sensor.security_status
   - sensor.garage_door
   - climate.first_floor
@@ -98,14 +98,16 @@ Doors:
   - sensor.laundry_room_door
 
 Family:
+  - device_tracker.jeffreystonesiphone
   - device_tracker.owntracks_jeffreystonesiphone
   - device_tracker.katherinestonesiphone
 
 Jeffrey:
-  - sensor.jeffrey_location
+  - device_tracker.owntracks_jeffreystonesiphone
   - sensor.jeff_iphone_batt
   - sensor.jeff_destination
   - sensor.jeff_ett_home
+  - input_boolean.jeff_heading_home
 
 Jeffrey Trackers:
   - device_tracker.jeffreystonesiphone
@@ -115,10 +117,10 @@ Katherine:
   - device_tracker.katherinestonesiphone
   - sensor.kat_iphone_batt
   - sensor.kat_ett_home
+  - input_boolean.kat_heading_home
 
 Katherine Trackers:
   - device_tracker.katherinestonesiphone
-
 
 Travel Times:
   - sensor.home_to_summit

@@ -1,8 +1,9 @@
 security_check_verified:
   sequence:
   - condition: state
-    entity_id: sensor.garage_door_contact
-    state: "Closed"
+    #entity_id: sensor.garage_door_contact
+    entity_id: cover.garage_door
+    state: "closed"
   - condition: state
     entity_id: group.doors
     state: "closed"

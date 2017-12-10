@@ -5,7 +5,8 @@ security_check_garage:
       name: EVENT
       message: "SECURITY: Performing Security check - Garage"
   - condition: state
-    entity_id: sensor.garage_door_contact
+    #entity_id: sensor.garage_door_contact
+    entity_id: cover.garage_door
     state: "open"
   - delay:
       minutes: 1
