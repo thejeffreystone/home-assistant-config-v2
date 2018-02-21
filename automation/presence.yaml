@@ -15,6 +15,7 @@
   action:
   - service: script.standby
   - service: script.driveway_on
+  - service: script.vacation_canceled
 
 - alias: Family Has Left
   trigger:

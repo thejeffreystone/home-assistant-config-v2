@@ -5,4 +5,4 @@ vacation_canceled:
       state: "on"
     - service: input_boolean.turn_off
       data:
-      entity_id: input_boolean.vacation_mode
+        entity_id: input_boolean.vacation_mode
