@@ -21,7 +21,15 @@ lights:
     - group.driveway
     - group.front_porch
 
-media:
+people:
+  name: People
+  view: yes
+  icon: mdi:human-male-female
+  entities:
+    - group.jeffrey
+    - group.katherine
+
+media_downstairs:
   name: media
   view: yes
   icon: mdi:theater
@@ -30,19 +38,23 @@ media:
     - group.tvs
     - group.gaming
     - media_player.apple_tv
-    - media_player.chromecast_lr
+    - media_player.living_room_tv
     - media_player.roku_5s6719003683
 
-people:
-  name: People
+media_guest:
+  name: Guest Room Media
   view: yes
-  icon: mdi:human-male-female
+  icon: mdi:hotel
   entities:
-    - group.jeffrey
-    - group.katherine
+    - media_player.guest_tv
+    
+cars:
+  name: Cars
+  view: yes
+  icon: mdi:car
+  entities:
     - group.travel_times
 
-    
 network:
   name: Network
   view: yes
@@ -263,10 +275,10 @@ Fire:
 
 System:
   - sensor.cpu_use
-  - sensor.disk_use_
-  - sensor.ram_free
-  - sensor.received_eth0
-  - sensor.sent_eth0
+  - sensor.disk_use_percent
+  - sensor.memory_free
+  - sensor.network_in
+  - sensor.network_out
   - sensor.last_boot
 
 Alarms:
