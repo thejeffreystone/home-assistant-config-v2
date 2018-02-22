@@ -10,6 +10,8 @@ default_view:
       - group.loft
       - group.outside_lights
       - group.garage_door
+      - group.weather
+      - group.pollen
       
 lights:
   name: Lights
@@ -284,10 +286,22 @@ System:
 Alarms:
   control: hidden
   entities:
-  - sensor.pws_alerts
   - input_boolean.garage_issue
   - input_boolean.security_alarm
   - input_boolean.tornado_alarm
+
+Weather:
+  control: hidden
+  entities:
+  - sensor.pws_alerts
+
+Pollen:
+  control: hidden
+  entities:
+  - sensor.allergy_average_forecasted
+  - sensor.allergy_average_historical
+  - sensor.allergy_index_today
+  - sensor.allergy_index_tomorrow
 
 Trash Schedule:
   - input_select.trash_pickup
