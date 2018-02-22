@@ -287,10 +287,10 @@ Fire:
 
 HA System Monitor:
   - sensor.cpu
-  - sensor.disk_use_percent
+  - sensor.disk_use_percent_
   - sensor.memory_use_percent
-  - sensor.network_in
-  - sensor.network_out
+  - sensor.network_in_eth0
+  - sensor.network_out_eth0
   - sensor.last_boot
   - sensor.ha_uptime
   - sensor.lets_encrypt_expiration
@@ -323,10 +323,11 @@ Weather:
 Pollen:
   control: hidden
   entities:
-  - sensor.allergy_average_forecasted
-  - sensor.allergy_average_historical
+  - sensor.allergy_index_average_forecasted
+  - sensor.allergy_index_average_historical
   - sensor.allergy_index_today
   - sensor.allergy_index_tomorrow
+  - sensor.cold__flu_forecasted_average
 
 Trash Schedule:
   - input_select.trash_pickup
