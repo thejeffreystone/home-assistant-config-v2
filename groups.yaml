@@ -286,9 +286,9 @@ Fire:
   - sensor.smoke_kitchen
 
 HA System Monitor:
-  - sensor.cpu_use
+  - sensor.cpu
   - sensor.disk_use_percent
-  - sensor.memory_free
+  - sensor.memory_use_percent
   - sensor.network_in
   - sensor.network_out
   - sensor.last_boot
