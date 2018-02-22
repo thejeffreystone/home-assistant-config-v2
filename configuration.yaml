@@ -63,6 +63,7 @@ zwave:
 media_player:
   - platform: cast
   - platform: apple_tv
+    host: 192.168.7.23
     login_id: !secret apple_tv_login
   - platform: roku
   - platform: vlc
