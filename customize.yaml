@@ -333,5 +333,9 @@ sensor.ha_v2db:
 sensor.ha_log:
   friendly_name: HA Log
   icon: mdi:file
+
+media_player.roku_5s6719003683:
+  friendly_name: Roku Living Room
+  icon: mdi:youtube-tv
 ###### Groups #######
 

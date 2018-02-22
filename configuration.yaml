@@ -53,7 +53,17 @@ sun:
 
 ios:
 
-logbook:
+#https://home-assistant.io/components/recorder/
+recorder:
+  purge_interval: 1
+  purge_keep_days: 3
+
+#https://home-assistant.io/components/logger/
+logger:
+  default: error
+  logs:
+    homeassistant.components.sensor.template: critical
+    homeassistant.components.cover: critical
 
 history:
 
@@ -66,6 +76,8 @@ media_player:
     host: 192.168.7.23
     login_id: !secret apple_tv_login
   - platform: roku
+    host: 192.168.7.52
+    name: roku living room
   - platform: vlc
     name: hass_speaker
     arguments: '--alsa-audio-device=hw:0,0'
@@ -110,6 +122,12 @@ scene: !include scenes.yaml
 input_select: !include input_select.yaml
 input_boolean: !include input_boolean.yaml
 zone: !include zones.yaml
+ios: !include ios.yaml
+
+duckdns:
+  domain: !secret duckdns_domain
+  access_token: !secret duckdns_token
+
 
 python_script:
 
