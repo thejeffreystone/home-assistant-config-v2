@@ -45,8 +45,8 @@
    name: Current HA Version
 -  platform: command_line
    name: Installed version
-   command: "head -5 /home/ha/.homeassistant/.HA_VERSION"
+   command: "head -5 /home/homeassistant/.homeassistant/.HA_VERSION"
 - platform: filesize
   file_paths:
-    - /home/ha/.homeassistant/home-assistant_v2.db
-    - /home/ha/.homeassistant/home-assistant.log
+    - /home/homeassistant/.homeassistant/home-assistant_v2.db
+    - /home/homeassistant/.homeassistant/home-assistant.log
