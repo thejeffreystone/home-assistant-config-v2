@@ -60,7 +60,7 @@ cars:
 homeassistant:
   name: HA 
   view: yes
-  icon: mdi:home_automation
+  icon: mdi:home-automation
   entities:
     - group.ha_system_monitor
     - group.ha_version_info

@@ -303,5 +303,35 @@ sensor.family_status:
   icon: mdi:home
   name: Family Status
 
+sensor.ha_uptime:
+  friendly_name: HA Uptime
+  icon: mdi:clock-start
+
+sensor.installed_version:
+  friendly_name: Installed
+  icon: mdi:folder-download
+
+sensor.lets_encrypt_expiration:
+  friendly_name: Lets Encrypt Expiration
+  icon: mdi:timelapse
+
+sensor.current_ha_version:
+  friendly_name: Latest Release
+  icon: mdi:github-circle
+
+sensor.connected_clients:
+  friendly_name: Connections
+  icon: mdi:lan-connect
+
+zwave.aeotec_zw090_zstick_gen5_us:
+  friendly_name: Zwave USB Hub
+
+sensor.ha_v2db:
+  friendly_name: HA Database
+  icon: mdi:file
+
+sensor.ha_log:
+  friendly_name: HA Log
+  icon: mdi:file
 ###### Groups #######
 
