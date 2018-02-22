@@ -57,6 +57,16 @@ cars:
   entities:
     - group.travel_times
 
+homeassistant:
+  name: HA 
+  view: yes
+  icon: mdi:home_automation
+  entities:
+    - group.ha_system_monitor
+    - group.ha_version_info
+    - group.file_size
+    - group.zwave
+
 network:
   name: Network
   view: yes
@@ -65,7 +75,7 @@ network:
     - group.internet
     - group.computers
     - group.home_automation
-    - group.system
+    
 
 chores:
   name: Chores
@@ -275,13 +285,28 @@ Zones:
 Fire:
   - sensor.smoke_kitchen
 
-System:
+HA System Monitor:
   - sensor.cpu_use
   - sensor.disk_use_percent
   - sensor.memory_free
   - sensor.network_in
   - sensor.network_out
   - sensor.last_boot
+  - sensor.ha_uptime
+  - sensor.lets_encrypt_expiration
+
+HA Version Info:
+  - sensor.installed_version
+  - sensor.current_ha_version
+
+File Size:
+  control: hidden
+  entities:
+    - sensor.ha_v2db
+    - sensor.ha_log
+
+Zwave:
+  - zwave.aeotec_zw090_zstick_gen5_us
 
 Alarms:
   control: hidden
