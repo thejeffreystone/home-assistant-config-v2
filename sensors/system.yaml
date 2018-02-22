@@ -47,7 +47,7 @@
   command: "head -5 /home/homeassistant/.homeassistant/.HA_VERSION"
 - platform: command_line
   name: ha_v2db
-  command: “ls -sh /home/homeassistant/.homeassistant/home-assistant_v2.db | cut -f1 -d ' '”
+  command: "ls -sh /home/homeassistant/.homeassistant/home-assistant_v2.db | cut -f1 -d ' '"
 - platform: command_line
   name: ha_log
-  command: “ls -sh /home/homeassistant/.homeassistant/home-assistant.log | cut -f1 -d ' '”
+  command: "ls -sh /home/homeassistant/.homeassistant/home-assistant.log | cut -f1 -d ' '"
