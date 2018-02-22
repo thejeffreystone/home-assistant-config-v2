@@ -57,6 +57,9 @@ logbook:
 
 history:
 
+zwave:
+  usb_path: /dev/ttyACM0
+
 media_player:
   - platform: cast
     host: 192.168.7.48
