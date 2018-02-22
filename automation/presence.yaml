@@ -65,6 +65,7 @@
     zone: zone.home
   action:
   - service: script.jeff_destination_arrived
+  - service: script.driveway_on
 
 - alias: Jeff Arrives Home Audible
   trigger:
@@ -99,6 +100,7 @@
   - service: script.kat_is_home_audible
   - service: input_boolean.turn_off
     entity_id: input_boolean.kat_heading_home
+  - service: script.driveway_on
 
 - alias: Kat Arrives Zoo Notification
   trigger:
