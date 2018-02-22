@@ -113,6 +113,17 @@ input_select: !include input_select.yaml
 input_boolean: !include input_boolean.yaml
 zone: !include zones.yaml
 
+sensor:
+  platform: pollen
+  zip_code: 30017
+  monitored_conditions:
+    - allergy_average_forecasted
+    - allergy_average_historical
+    - allergy_index_today
+    - allergy_index_tomorrow
+    - allergy_index_yesterday
+    - disease_average_forecasted
+
 python_script:
 
 ### Devices and Services
