@@ -19,7 +19,6 @@
   - 'beat'
 - platform: cert_expiry
   host: !secret BASEURL
-  port: 443
   name: Lets Encrypt Expiration
 - platform: command_line
   name: "HA Uptime"
