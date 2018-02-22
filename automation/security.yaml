@@ -72,16 +72,6 @@
     entity_id: script.security_check_garage
   - service: script.security_check_verified
 
-- alias: Security Alarm Activated
-  trigger:
-  - platform: state
-    entity_id: input_boolean.security_alarm
-    to: 'on'
-  action:
-  - service: homeassistant.turn_on
-    entity_id: script.security_sound_alarm
-  - service: script.security_warning
-
 - alias: Security Breach
   trigger:
   - platform: state
