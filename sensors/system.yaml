@@ -1,7 +1,7 @@
 - platform: systemmonitor
   resources:
   - type: disk_use_percent
-    arg: /home
+    arg: /
   - type: memory_use_percent
   - type: network_in
     arg: eth0
