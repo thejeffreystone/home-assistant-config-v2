@@ -222,6 +222,9 @@ switch.front_porch_right:
 switch.loft_lamp:
   icon: mdi:lightbulb
 
+switch.kitchen_accents:
+  icon: mdi:lightbulb
+
 cover.garage_door:
   device_class: garage
   friendly_name: Garage Door
