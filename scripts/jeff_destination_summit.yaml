@@ -1,4 +1,4 @@
-jeff_destination_home:
+jeff_destination_summit:
   sequence:
     - service: mqtt.publish
       data:
