@@ -67,8 +67,8 @@ logger:
 
 history:
 
-zwave:
-  usb_path: /dev/ttyACM0
+#zwave:
+#  usb_path: /dev/ttyACM0
 
 media_player:
   - platform: cast
