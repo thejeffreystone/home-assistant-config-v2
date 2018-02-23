@@ -1,0 +1,7 @@
+- platform: mqtt
+  name: "Kitchen Accents"
+  state_topic: "smartthings/Kitchen Accents/switch"
+  command_topic: "smartthings/Kitchen Accents/switch"
+  payload_on: "on"
+  payload_off: "off"
+  retain: true

@@ -26,12 +26,6 @@
   payload_off: "closed"
   retain: true
 - platform: mqtt
-  name: "Kitchen Smoke"
-  state_topic: "smartthings/Kitchen Smoke/smoke"
-  payload_on: "smoke"
-  payload_off: "clear"
-  retain: true
-- platform: mqtt
   name: "Garage Door Contact"
   state_topic: "smartthings/Garage Door/contact"
   payload_on: "open"
@@ -48,16 +42,4 @@
   state_topic: "smartthings/Laundry Room Door/contact"
   payload_on: "open"
   payload_off: "closed"
-  retain: true
-- platform: mqtt
-  name: "Kat Presence"
-  state_topic: "smartthings/Kat/presence"
-  payload_on: "present"
-  payload_off: "not present"
-  retain: true
-- platform: mqtt
-  name: "Jeff Presence"
-  state_topic: "smartthings/Jeffrey/presence"
-  payload_on: "present"
-  payload_off: "not present"
   retain: true
