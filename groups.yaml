@@ -22,6 +22,7 @@ lights:
     - group.loft
     - group.driveway
     - group.front_porch
+    - group.kitchen
 
 people:
   name: People
@@ -158,6 +159,9 @@ Living Room:
 
 Loft:
   - switch.loft_lamp
+
+Kitchen:
+  - switch.kitchen_accents
 
 Scenes:
   - scene.livingroom_dim
