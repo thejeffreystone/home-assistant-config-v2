@@ -158,7 +158,8 @@ climate:
 
 alexa:
 
-
+map:
+  
 ### Custom Commands
 
 shell_command:
