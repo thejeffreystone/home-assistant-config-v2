@@ -81,5 +81,7 @@
         value_template: '{{ "Armed" if is_state("input_boolean.secure_mode", "on") else "Disarmed" }}'
         icon_template: '{%- if is_state("input_boolean.secure_mode", "on") %}mdi:lock{% else %}mdi:lock-open{%- endif %}'
 
-      
+      garage_motion:
+        friendly_name: "Garage Motion"
+        value_template: "{{ 'open' if is_state('sensor.garage_dome_sensor', 'motion') else 'clear' }}"
       
