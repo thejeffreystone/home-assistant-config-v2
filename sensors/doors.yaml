@@ -43,3 +43,9 @@
   payload_on: "open"
   payload_off: "closed"
   retain: true
+- platform: mqtt
+  name: "Attic Door" # Dome Door Sensor
+  state_topic: "smartthings/Attic Door/contact"
+  payload_on: "open"
+  payload_off: "closed"
+  retain: true
