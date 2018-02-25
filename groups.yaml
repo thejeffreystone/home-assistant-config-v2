@@ -92,6 +92,8 @@ security_system:
     - group.modes
     - group.security_status
     - group.hvac
+    - group.doors
+    - group.garage
 
 settings:
   name: Settings
@@ -120,6 +122,7 @@ Doors:
   - sensor.back_door
   - sensor.front_door
   - sensor.laundry_room_door
+  - sensor.attic_door
 
 Family:
   - device_tracker.jeffreystonesiphone
@@ -284,6 +287,10 @@ Notifications:
 
 Zones:
   - sensor.zone_3
+
+Garage:
+  - sensor.garage_door
+  - sensor.garage_motion
 
 Fire:
   - sensor.smoke_kitchen
