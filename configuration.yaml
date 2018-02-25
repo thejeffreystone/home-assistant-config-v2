@@ -51,8 +51,6 @@ updater:
 
 sun:
 
-ios:
-
 #https://home-assistant.io/components/recorder/
 recorder:
   purge_interval: 1
