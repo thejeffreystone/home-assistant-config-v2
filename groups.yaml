@@ -90,8 +90,9 @@ security_system:
   icon: mdi:security
   entities:
     - group.modes
-    - group.security_status
-    - group.hvac
+    - group.security_system
+    - group.security_threats
+    - group.fire
     - group.doors
     - group.garage
 
@@ -111,6 +112,12 @@ Security Status:
   - sensor.garage_door
   - group.doors
   - sensor.smoke_kitchen
+
+Security System:
+  - sensor.security_status
+
+Security Threats:
+  - sensor.pws_alerts
 
 House:
   - sensor.family_presence
