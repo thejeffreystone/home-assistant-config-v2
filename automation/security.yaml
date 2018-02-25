@@ -165,18 +165,6 @@
   - service: input_boolean.turn_off
     entity_id: input_boolean.security_alarm
 
-- alias: Security Alarm Deactivated
-  trigger:
-    platform: state
-    entity_id: input_boolean.security_alarm
-    to: 'off'
-  action:
-  - service: script.kill_audible_alarm
-  - service: homeassistant.turn_off
-    entity_id: script.security_sound_alarm
-  - service: script.security_access_authorized
-
-
 - alias: Security Alarm Activated
   trigger:
     platform: state
