@@ -84,7 +84,7 @@ chores:
   entities:
     - group.trash_schedule
 
-security_system:
+security:
   name: Security
   view: yes
   icon: mdi:security
