@@ -1,0 +1,11 @@
+security_warning_garage_door:
+  sequence:
+  - service: notify.jeff_ios
+    data:
+      message: 'Alarm: Garage Door'
+  - service: tts.google_say
+    data:
+      entity_id: media_player.hass_speaker
+      message: I have detected unauthorized access at the Garage Door. Attempting to verify.
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.security_alarm

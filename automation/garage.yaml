@@ -103,3 +103,18 @@
   action:
   - service: homeassistant.turn_on
     entity_id: script.driveway_off
+
+- alias: Garage Motion after Sunset
+  trigger:
+  - platform: state
+    entity_id: sensor.garage_motion
+    from: clear
+    to: motion
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+  action:
+  - service: notify.jeff_ios
+    data:
+      message: 'Motion: Garage'
