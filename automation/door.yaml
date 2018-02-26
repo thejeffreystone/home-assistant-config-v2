@@ -5,10 +5,37 @@
 #
 #
 #####################
-# - alias: Door Opened
+- alias: Door Opened
+  trigger:
+  - platform: state
+    entity_id: group.doors
+    from: closed
+    to: open
+  condition:
+  - condition: state
+    entity_id: input_boolean.audible_notifications
+    state: 'on'
+  action:
+  - service: shell_command.door_chime
+
+- alias: Door Closed
+  trigger:
+  - platform: state
+    entity_id: group.doors
+    from: open
+    to: closed
+  condition:
+  - condition: state
+    entity_id: input_boolean.audible_notifications
+    state: 'on'
+  action:
+  - service: shell_command.door_chime
+
+
+# - alias: Back Door Opened   
 #   trigger:
 #   - platform: state
-#     entity_id: group.doors
+#     entity_id: sensor.zone_3
 #     from: closed
 #     to: open
 #   condition:
@@ -16,12 +43,15 @@
 #     entity_id: input_boolean.audible_notifications
 #     state: 'on'
 #   action:
-#   - service: shell_command.door_chime
+#   - service: tts.google_say
+#     data:
+#       entity_id: media_player.hass_speaker
+#       message: Back Door is open
 
-# - alias: Door Closed
+# - alias: Back Door Closed
 #   trigger:
 #   - platform: state
-#     entity_id: group.doors
+#     entity_id: sensor.zone_3
 #     from: open
 #     to: closed
 #   condition:
@@ -29,74 +59,12 @@
 #     entity_id: input_boolean.audible_notifications
 #     state: 'on'
 #   action:
-#   - service: shell_command.door_chime
+#   - service: tts.google_say
+#     data:
+#       entity_id: media_player.hass_speaker
+#       message: Back Door is closed
 
-
-- alias: Back Door Opened   
-  trigger:
-  - platform: state
-    entity_id: sensor.zone_3
-    from: closed
-    to: open
-  condition:
-  - condition: state
-    entity_id: input_boolean.audible_notifications
-    state: 'on'
-  action:
-  - service: tts.google_say
-    data:
-      entity_id: media_player.hass_speaker
-      message: Back Door is open
-
-- alias: Back Door Closed
-  trigger:
-  - platform: state
-    entity_id: sensor.zone_3
-    from: open
-    to: closed
-  condition:
-  - condition: state
-    entity_id: input_boolean.audible_notifications
-    state: 'on'
-  action:
-  - service: tts.google_say
-    data:
-      entity_id: media_player.hass_speaker
-      message: Back Door is closed
-
-- alias: Front Door Opened   
-  trigger:
-  - platform: state
-    entity_id: sensor.front_door
-    from: closed
-    to: open
-  condition:
-  - condition: state
-    entity_id: input_boolean.audible_notifications
-    state: 'on'
-  action:
-  - service: tts.google_say
-    data:
-      entity_id: media_player.hass_speaker
-      message: Front Door is open
-
-- alias: Front Door Closed
-  trigger:
-  - platform: state
-    entity_id: sensor.front_door
-    from: open
-    to: closed
-  condition:
-  - condition: state
-    entity_id: input_boolean.audible_notifications
-    state: 'on'
-  action:
-  - service: tts.google_say
-    data:
-      entity_id: media_player.hass_speaker
-      message: Front Door is closed
-
-# - alias: Front Door Opened
+# - alias: Front Door Opened   
 #   trigger:
 #   - platform: state
 #     entity_id: sensor.front_door
@@ -107,12 +75,15 @@
 #     entity_id: input_boolean.audible_notifications
 #     state: 'on'
 #   action:
-#   - service: shell_command.door_chime
+#   - service: tts.google_say
+#     data:
+#       entity_id: media_player.hass_speaker
+#       message: Front Door is open
 
 # - alias: Front Door Closed
 #   trigger:
 #   - platform: state
-#     entity_id: sensor.front_3
+#     entity_id: sensor.front_door
 #     from: open
 #     to: closed
 #   condition:
@@ -120,39 +91,68 @@
 #     entity_id: input_boolean.audible_notifications
 #     state: 'on'
 #   action:
-#   - service: shell_command.door_chime
+#   - service: tts.google_say
+#     data:
+#       entity_id: media_player.hass_speaker
+#       message: Front Door is closed
 
-- alias: Laundry Room Door Opened
-  trigger:
-  - platform: state
-    entity_id: sensor.laundry_room_door
-    from: closed
-    to: open
-  condition:
-  - condition: state
-    entity_id: input_boolean.audible_notifications
-    state: 'on'
-  action:
-  - service: tts.google_say
-    data:
-      entity_id: media_player.hass_speaker
-      message: Laundry Door is open
+# # - alias: Front Door Opened
+# #   trigger:
+# #   - platform: state
+# #     entity_id: sensor.front_door
+# #     from: closed
+# #     to: open
+# #   condition:
+# #   - condition: state
+# #     entity_id: input_boolean.audible_notifications
+# #     state: 'on'
+# #   action:
+# #   - service: shell_command.door_chime
 
-- alias: Laundry Roomm Door Closed
-  trigger:
-  - platform: state
-    entity_id: sensor.laundry_room_door
-    from: open
-    to: closed
-  condition:
-  - condition: state
-    entity_id: input_boolean.audible_notifications
-    state: 'on'
-  action:
-  - service: tts.google_say
-    data:
-      entity_id: media_player.hass_speaker
-      message: Laundry Door is closed
+# # - alias: Front Door Closed
+# #   trigger:
+# #   - platform: state
+# #     entity_id: sensor.front_3
+# #     from: open
+# #     to: closed
+# #   condition:
+# #   - condition: state
+# #     entity_id: input_boolean.audible_notifications
+# #     state: 'on'
+# #   action:
+# #   - service: shell_command.door_chime
+
+# - alias: Laundry Room Door Opened
+#   trigger:
+#   - platform: state
+#     entity_id: sensor.laundry_room_door
+#     from: closed
+#     to: open
+#   condition:
+#   - condition: state
+#     entity_id: input_boolean.audible_notifications
+#     state: 'on'
+#   action:
+#   - service: tts.google_say
+#     data:
+#       entity_id: media_player.hass_speaker
+#       message: Laundry Door is open
+
+# - alias: Laundry Roomm Door Closed
+#   trigger:
+#   - platform: state
+#     entity_id: sensor.laundry_room_door
+#     from: open
+#     to: closed
+#   condition:
+#   - condition: state
+#     entity_id: input_boolean.audible_notifications
+#     state: 'on'
+#   action:
+#   - service: tts.google_say
+#     data:
+#       entity_id: media_player.hass_speaker
+#       message: Laundry Door is closed
 
 - alias: Attic Door Opened   
   trigger:
