@@ -2,8 +2,13 @@ security_warning_back_door:
   sequence:
   - service: notify.jeff_ios
     data:
-      message: 'Alarm: Back Door'
+      message: 'Notification: Back Door'
+  - delay:
+      seconds: 10
+  - condition: state
+    entity_id: sensor.zone_3
+    state: 'open' 
   - service: tts.google_say
     data:
       entity_id: media_player.hass_speaker
-      message: I have detected unauthorized access at the Back Door. Attempting to verify. 
+      message: Back door open 

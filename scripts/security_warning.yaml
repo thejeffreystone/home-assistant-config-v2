@@ -6,4 +6,4 @@ security_warning:
   - service: tts.google_say
     data:
       entity_id: media_player.hass_speaker
-      message: Unauthorized access detected. Attempting to verify. Alarm will sound in 80 seconds. 
+      message: Unauthorized access detected. Alarm will sound in 80 seconds. 

@@ -32,37 +32,29 @@
   - service: shell_command.door_chime
 
 
-# - alias: Back Door Opened   
-#   trigger:
-#   - platform: state
-#     entity_id: sensor.zone_3
-#     from: closed
-#     to: open
-#   condition:
-#   - condition: state
-#     entity_id: input_boolean.audible_notifications
-#     state: 'on'
-#   action:
-#   - service: tts.google_say
-#     data:
-#       entity_id: media_player.hass_speaker
-#       message: Back Door is open
+- alias: Back Door Opened   
+  trigger:
+  - platform: state
+    entity_id: sensor.zone_3
+    from: closed
+    to: open
+  condition:
+  - condition: state
+    entity_id: input_boolean.audible_notifications
+    state: 'on'
+  action:
+  - service: homeassistant.turn_on
+    entity_id: script.security_warning_back_door
 
-# - alias: Back Door Closed
-#   trigger:
-#   - platform: state
-#     entity_id: sensor.zone_3
-#     from: open
-#     to: closed
-#   condition:
-#   - condition: state
-#     entity_id: input_boolean.audible_notifications
-#     state: 'on'
-#   action:
-#   - service: tts.google_say
-#     data:
-#       entity_id: media_player.hass_speaker
-#       message: Back Door is closed
+- alias: Back Door Closed
+  trigger:
+  - platform: state
+    entity_id: sensor.zone_3
+    from: open
+    to: closed
+  action:
+  - service: homeassistant.turn_off
+    entity_id: script.security_warning_back_door
 
 # - alias: Front Door Opened   
 #   trigger:

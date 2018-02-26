@@ -94,6 +94,7 @@ security:
     - group.security_threats
     - group.fire
     - group.doors
+    - group.attic
     - group.garage
 
 settings:
@@ -129,6 +130,8 @@ Doors:
   - sensor.back_door
   - sensor.front_door
   - sensor.laundry_room_door
+
+Attic:
   - sensor.attic_door
 
 Family:

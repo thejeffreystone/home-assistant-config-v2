@@ -72,36 +72,14 @@
     entity_id: script.security_check_garage
   - service: script.security_check_verified
 
-# - alias: Security Breach
-#   trigger:
-#   - platform: state
-#     entity_id: sensor.garage_door_contact
-#     to: open
-#   - platform: state
-#     entity_id: sensor.zone_status
-#     to: open
-#   condition:
-#   - condition: state
-#     entity_id: input_boolean.secure_mode
-#     state: 'on'
-#   action:
-#   - service: input_boolean.turn_on
-#     entity_id: input_boolean.security_alarm
-
-- alias: Security Breach Garage Door
+- alias: Security Breach
   trigger:
   - platform: state
     entity_id: sensor.garage_door_contact
     to: open
-  condition:
-  - condition: state
-    entity_id: input_boolean.secure_mode
-    state: 'on'
-  action:
-  - service: script.security_warning_garage_door
-
-- alias: Security Breach Garage Motion
-  trigger:
+  - platform: state
+    entity_id: sensor.zone_status
+    to: open
   - platform: state
     entity_id: sensor.garage_motion
     to: motion
@@ -110,44 +88,69 @@
     entity_id: input_boolean.secure_mode
     state: 'on'
   action:
-  - service: script.security_warning_garage_motion
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.security_alarm
 
-- alias: Security Breach Front Door
-  trigger:
-  - platform: state
-    entity_id: sensor.front_door
-    to: open
-  condition:
-  - condition: state
-    entity_id: input_boolean.secure_mode
-    state: 'on'
-  action:
-  - service: script.security_warning_front_door
+# - alias: Security Breach Garage Door
+#   trigger:
+#   - platform: state
+#     entity_id: sensor.garage_door_contact
+#     to: open
+#   condition:
+#   - condition: state
+#     entity_id: input_boolean.secure_mode
+#     state: 'on'
+#   action:
+#   - service: script.security_warning_garage_door
 
-- alias: Security Breach Back Door
-  trigger:
-  - platform: state
-    entity_id: sensor.zone_3
-    to: open
-  condition:
-  - condition: state
-    entity_id: input_boolean.secure_mode
-    state: 'on'
-  action:
-  - service: script.security_warning_back_door
+# - alias: Security Breach Garage Motion
+#   trigger:
+#   - platform: state
+#     entity_id: sensor.garage_motion
+#     to: motion
+#   condition:
+#   - condition: state
+#     entity_id: input_boolean.secure_mode
+#     state: 'on'
+#   action:
+#   - service: script.security_warning_garage_motion
+
+# - alias: Security Breach Front Door
+#   trigger:
+#   - platform: state
+#     entity_id: sensor.front_door
+#     to: open
+#   condition:
+#   - condition: state
+#     entity_id: input_boolean.secure_mode
+#     state: 'on'
+#   action:
+#   - service: script.security_warning_front_door
+
+# - alias: Security Breach Back Door
+#   trigger:
+#   - platform: state
+#     entity_id: sensor.zone_3
+#     to: open
+#   condition:
+#   - condition: state
+#     entity_id: input_boolean.secure_mode
+#     state: 'on'
+#   action:
+#   - service: script.security_warning_back_door
 
 
-- alias: Security Breach Landry Door
-  trigger:
-  - platform: state
-    entity_id: sensor.Laundry_room_door
-    to: open
-  condition:
-  - condition: state
-    entity_id: input_boolean.secure_mode
-    state: 'on'
-  action:
-  - service: script.security_warning_laundry_door
+# - alias: Security Breach Landry Door
+#   trigger:
+#   - platform: state
+#     entity_id: sensor.Laundry_room_door
+#     to: open
+#   condition:
+#   - condition: state
+#     entity_id: input_boolean.secure_mode
+#     state: 'on'
+#   action:
+#   - service: script.security_warning_laundry_door
 
 - alias: Security Access Granted
   trigger:
