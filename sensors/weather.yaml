@@ -43,3 +43,23 @@
     - allergy_index_tomorrow
     - allergy_index_yesterday
     - disease_average_forecasted
+## Accurite 158 - Back Porch
+- platform: mqtt
+  name: "Back Porch Temperature"
+  state_topic: "house/accurite-158/temperature"
+- platform: mqtt
+  name: "Back Porch Humidity"
+  state_topic: "house/accurite-158/humidity"
+- platform: mqtt
+  name: "Accurite Back Porch Status"
+  state_topic: "house/accurite-158/status"
+- platform: mqtt
+  name: "Accurite Back Porch Battery"
+  state_topic: "house/accurite-158/battery"
+- platform: mqtt
+  name: "Accurite Back Porch Model"
+  state_topic: "house/accurite-158/model"
+- platform: mqtt
+  name: "Accurite Back Porch lupdate"
+  state_topic: "house/accurite-158/lastupdate"
+  
