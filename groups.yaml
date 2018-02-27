@@ -147,6 +147,8 @@ Family:
   - device_tracker.katherinestonesiphone
 
 Jeffrey:
+  control: hidden
+  entities:
   - device_tracker.owntracks_jeffreystonesiphone
   - sensor.jeff_iphone_batt
   - sensor.jeff_destination
@@ -155,6 +157,8 @@ Jeffrey:
   - input_boolean.text_notify_jeff
   
 Katherine:
+  control: hidden
+  entities:
   - device_tracker.katherinestonesiphone
   - sensor.kat_iphone_batt
   - sensor.kat_ett_home
