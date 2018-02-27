@@ -1,7 +1,14 @@
 - platform: mqtt
-  name: "Kitchen Accents"
-  state_topic: "smartthings/Kitchen Accents/switch"
-  command_topic: "smartthings/Kitchen Accents/switch"
+  name: "Kitchen Cabinets"
+  state_topic: "smartthings/Kitchen Cabinets/switch"
+  command_topic: "smartthings/Kitchen Cabinets/switch"
+  payload_on: "on"
+  payload_off: "off"
+  retain: true
+- platform: mqtt
+  name: "Kitchen Light Strip"
+  state_topic: "smartthings/Kitchen LIght Strip/switch"
+  command_topic: "smartthings/Kitchen LIght Strip/switch"
   payload_on: "on"
   payload_off: "off"
   retain: true
