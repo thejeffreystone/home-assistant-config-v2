@@ -18,9 +18,9 @@
                 Away
             {%- endif %}
       icon_template: >-
-        {%- if is_state("sensor.family_presence", "home") %}
+        {%- if is_state("sensor.family_presence", "Home") %}
           mdi:home
-        {%- elif is_state("sensor.family_presence", "away") %}
+        {%- elif is_state("sensor.family_presence", "Away") %}
           mdi:home-outline
         {% else %}
           mdi:sync-alert

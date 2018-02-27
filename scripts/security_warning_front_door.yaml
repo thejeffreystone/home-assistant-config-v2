@@ -6,7 +6,7 @@ security_warning_front_door:
   - delay:
       seconds: 10
   - condition: state
-    entity_id: sensor.front_door
+    entity_id: binary_sensor.front_door
     state: 'open' 
   - service: tts.google_say
     data:

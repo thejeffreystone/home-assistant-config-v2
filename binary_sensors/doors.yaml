@@ -11,7 +11,7 @@
   payload_on: "open"
   payload_off: "closed"
   retain: true
-  device_class: door
+  device_class: garage_door
 - platform: mqtt
   name: "Front Door"
   state_topic: "smartthings/Front Door/contact"
