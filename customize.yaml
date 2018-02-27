@@ -346,12 +346,16 @@ switch.kitchen_cabinets:
 switch.kitchen_light_strip:
   icon: mdi:lightbulb
 sensor.accurite_back_porch_temperature:
+  friendly_name: Back Porch Temp
   icon: mdi:thermometer
 sensor.accurite_back_porch_humidity:
+  friendly_name: Back Porch Humidity
   icon: mdi:water-percent
 sensor.accurite_garage_temperature:
+  friendly_name: Garage Temp
   icon: mdi:thermometer
 sensor.accurite_garage_humidity:
+  friendly_name: Garage Humidity
   icon: mdi:water-percent
 binary_sensor.garage_dome_sensor:
   friendly_name: Garage Motion

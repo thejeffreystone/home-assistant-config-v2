@@ -31,6 +31,7 @@ people:
   entities:
     - group.jeffrey
     - group.katherine
+    - group.travel_times
 
 media:
   name: media
@@ -44,12 +45,18 @@ media:
     - media_player.roku_5s6719003683
     - media_player.guest_tv
 
-cars:
-  name: Cars
+weather:
+  name: weather
   view: yes
-  icon: mdi:car
+  icon: mdi:tree
   entities:
-    - group.travel_times
+    - group.weather_summary
+    - group.sun_and_moon
+    - group.weather_forecast
+    - group.pricipitation
+    - group.wind 
+    - group.daily_stats
+
 
 homeassistant:
   name: HA 
@@ -205,7 +212,11 @@ Weather Summary:
   - sensor.dark_sky_summary
   - sensor.dark_sky_apparent_temperature
   - sensor.dark_sky_humidity
-  - sensor.dark_sky_minutely_summary
+  - sensor.dark_sky_dew_point
+  - sensor.accurite_back_porch_temperature
+  - sensor.accurite_back_porch_humidity
+  - sensor.accurite_garage_temperature
+  - sensor.accurite_garage_humidity
 
 Weather Forecast:
   - sensor.dark_sky_minutely_summary
