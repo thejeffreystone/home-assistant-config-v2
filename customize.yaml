@@ -348,19 +348,19 @@ switch.kitchen_light_strip:
 sensor.accurite_back_porch_temperature:
   friendly_name: Back Porch Temp
   icon: mdi:thermometer
-  unit_of_measurement: 'Fahrenheit'
+  unit_of_measurement: 'Â°F'
 sensor.accurite_back_porch_humidity:
   friendly_name: Back Porch Humidity
   icon: mdi:water-percent
-  unit_of_measurement: 'Percent'
+  unit_of_measurement: '%'
 sensor.accurite_garage_temperature:
   friendly_name: Garage Temp
   icon: mdi:thermometer
-  unit_of_measurement: 'Fahrenheit'
+  unit_of_measurement: 'Â°F'
 sensor.accurite_garage_humidity:
   friendly_name: Garage Humidity
   icon: mdi:water-percent
-  unit_of_measurement: 'Percent'
+  unit_of_measurement: '%'
 binary_sensor.garage_dome_sensor:
   friendly_name: Garage Motion
 ###### Groups #######
