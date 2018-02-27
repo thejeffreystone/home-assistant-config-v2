@@ -6,6 +6,7 @@ default_view:
     entities:
       - group.house
       - group.security_system
+      - group.security_alerts
       - group.security_status
       - group.garage_door
       - group.weather_alerts
@@ -74,8 +75,9 @@ security:
   view: yes
   icon: mdi:security
   entities:
-    - group.modes
+    - group.house
     - group.security_system
+    - group.securty_alerts
     - group.security_status
     - group.fire
     - group.doors
@@ -93,13 +95,17 @@ settings:
 #################################################################################
 ### Grops ###
 Security Status:
+  - sensor.garage_door
+  - binary_sensor.back_door
+  - binary_sensor.front_door
+  - binary_sensor.laundry_room_door
+  - sensor.smoke_kitchen
+  - sensor.attic_door
+  
+Security Alerts:
   control: hidden
   entities:
   - sensor.pws_alerts
-  - sensor.garage_door
-  - group.doors
-  - sensor.smoke_kitchen
-  - sensor.attic_door
   - input_boolean.garage_issue
   - input_boolean.security_alarm
   - input_boolean.tornado_alarm
@@ -109,13 +115,13 @@ Security System:
   entities:
   - sensor.security_status
   - input_boolean.secure_mode
+  - input_boolean.vacation_mode
 
 House:
   control: hidden
   entities:
   - sensor.family_presence
   - input_boolean.audible_notifications
-  - input_boolean.vacation_mode
   - input_boolean.guest_mode
 
 Doors:
