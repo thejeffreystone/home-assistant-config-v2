@@ -58,16 +58,10 @@ homeassistant:
     - group.ha_system_monitor
     - group.ha_version_info
     - group.file_size
-
-network:
-  name: Network
-  view: yes
-  icon: mdi:network
-  entities:
     - group.internet
     - group.computers
     - group.home_automation
-    
+
 chores:
   name: Chores
   view: yes
