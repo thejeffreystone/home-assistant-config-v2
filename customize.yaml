@@ -353,5 +353,7 @@ sensor.accurite_garage_temperature:
   icon: mdi:thermometer
 sensor.accurite_garage_humidity:
   icon: mdi:water-percent
+binary_sensor.garage_dome_sensor:
+  friendly_name: Garage Motion
 ###### Groups #######
 

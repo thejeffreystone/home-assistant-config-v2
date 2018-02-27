@@ -75,7 +75,7 @@
 - alias: Security Breach
   trigger:
   - platform: state
-    entity_id: sensor.garage_door_contact
+    entity_id: binary_sensor.garage_door
     to: open
   - platform: state
     entity_id: binary_sensor.zone_status
@@ -192,14 +192,14 @@
 - alias: Security Issue Resolved
   trigger:
   - platform: state
-    entity_id: sensor.garage_door_contact
+    entity_id: binary_sensor.garage_door
     to: closed
   - platform: state
     entity_id: sensor.zone_status
     to: closed
   condition:
   - condition: state
-    entity_id: sensor.garage_door_contact
+    entity_id: binary_sensor.garage_door
     state: 'closed'
   - condition: state
     entity_id: sensor.zone_status
