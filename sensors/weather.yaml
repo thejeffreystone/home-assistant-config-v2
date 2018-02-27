@@ -45,10 +45,10 @@
     - disease_average_forecasted
 ## Accurite 158 - Back Porch
 - platform: mqtt
-  name: "Back Porch Temperature"
+  name: "Accurite Back Porch Temperature"
   state_topic: "house/accurite-158/temperature"
 - platform: mqtt
-  name: "Back Porch Humidity"
+  name: "Accurite Back Porch Humidity"
   state_topic: "house/accurite-158/humidity"
 # - platform: mqtt
 #   name: "Accurite Back Porch Status"
