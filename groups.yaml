@@ -113,6 +113,8 @@ Security System:
   - input_boolean.secure_mode
 
 House:
+  control: hidden
+  entities:
   - sensor.family_presence
   - input_boolean.audible_notifications
   - input_boolean.vacation_mode
