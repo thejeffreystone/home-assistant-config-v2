@@ -108,7 +108,6 @@ Security Status:
 Security Alerts:
   control: hidden
   entities:
-  - sensor.pws_alerts
   - input_boolean.garage_issue
   - input_boolean.security_alarm
   - input_boolean.tornado_alarm
