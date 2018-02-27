@@ -3,5 +3,5 @@ jeff_destination_zoo:
     - service: mqtt.publish
       data:
         topic: "jeff/driving/destination"
-        payload: "zoo"
+        payload: "Zoo"
         retain: true

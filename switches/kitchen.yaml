@@ -7,8 +7,8 @@
   retain: true
 - platform: mqtt
   name: "Kitchen Light Strip"
-  state_topic: "smartthings/Kitchen LIght Strip/switch"
-  command_topic: "smartthings/Kitchen LIght Strip/switch"
+  state_topic: "smartthings/Kitchen Light Strip/switch"
+  command_topic: "smartthings/Kitchen Light Strip/switch"
   payload_on: "on"
   payload_off: "off"
   retain: true
