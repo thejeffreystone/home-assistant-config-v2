@@ -2,8 +2,8 @@ security_warning:
   sequence:
   - service: notify.jeff_ios
     data:
-      message: 'Security Warning: Possible Unauthorized Access'
+      message: 'Security Warning: Unauthorized Access'
   - service: tts.google_say
     data:
       entity_id: media_player.hass_speaker
-      message: Unauthorized access detected. Alarm will sound in 80 seconds. 
+      message: Unauthorized access. Alarm will sound in 80 seconds. 
