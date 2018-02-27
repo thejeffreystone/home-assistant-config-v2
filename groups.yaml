@@ -53,7 +53,7 @@ weather:
     - group.weather_summary
     - group.sun_and_moon
     - group.weather_forecast
-    - group.pricipitation
+    - group.precipitation
     - group.wind 
     - group.daily_stats
 
