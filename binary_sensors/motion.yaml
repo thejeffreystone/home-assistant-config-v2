@@ -4,3 +4,4 @@
   payload_on: "open"
   payload_off: "closed"
   retain: true
+  device_class: motion

@@ -112,6 +112,7 @@ alert: !include_dir_merge_named alerts/
 group: !include groups.yaml
 automation: !include_dir_merge_list automation
 sensor: !include_dir_merge_list sensors
+binary_sensors: !include_dir_merge_list binary_sensors
 light: !include_dir_merge_list lights
 switch: !include_dir_merge_list switches
 script: !include_dir_merge_named scripts/

@@ -5,13 +5,10 @@ default_view:
     icon: mdi:home
     entities:
       - group.house
-      - group.alarms
-      - group.living_room
-      - group.loft
-      - group.outside_lights
+      - group.security_system
+      - group.security_status
       - group.garage_door
       - group.weather_alerts
-      - group.pollen
       - group.temperature
       
 lights:
@@ -24,6 +21,7 @@ lights:
     - group.driveway
     - group.front_porch
     - group.kitchen
+    - group.scenes
 
 people:
   name: People
@@ -33,25 +31,18 @@ people:
     - group.jeffrey
     - group.katherine
 
-media_downstairs:
+media:
   name: media
   view: yes
   icon: mdi:theater
   entities:
-    - group.scenes
     - group.tvs
     - group.gaming
     - media_player.apple_tv
     - media_player.living_room_tv
     - media_player.roku_5s6719003683
-
-media_guest:
-  name: Guest Room Media
-  view: yes
-  icon: mdi:hotel
-  entities:
     - media_player.guest_tv
-    
+
 cars:
   name: Cars
   view: yes
@@ -91,7 +82,7 @@ security:
   entities:
     - group.modes
     - group.security_system
-    - group.security_threats
+    - group.security_status
     - group.fire
     - group.doors
     - group.attic
@@ -109,30 +100,31 @@ settings:
 ### Grops ###
 Security Status:
   - sensor.pws_alerts
-  - sensor.security_status
   - sensor.garage_door
   - group.doors
   - sensor.smoke_kitchen
+  - sensor.attic_door
+  - input_boolean.garage_issue
+  - input_boolean.security_alarm
+  - input_boolean.tornado_alarm
 
 Security System:
   - sensor.security_status
-
-Security Threats:
-  - sensor.pws_alerts
+  - input_boolean.secure_mode
 
 House:
   - sensor.family_presence
-  - sensor.security_status
-  - sensor.garage_door
-  - climate.first_floor
+  - input_boolean.audible_notifications
+  - input_boolean.vacation_mode
+  - input_boolean.guest_mode
 
 Doors:
-  - sensor.back_door
-  - sensor.front_door
-  - sensor.laundry_room_door
+  - binary_sensor.back_door
+  - binary_sensor.front_door
+  - binary_sensor.laundry_room_door
 
 Attic:
-  - sensor.attic_door
+  - binary_sensor.attic_door
 
 Family:
   - device_tracker.jeffreystonesiphone
@@ -145,19 +137,14 @@ Jeffrey:
   - sensor.jeff_destination
   - sensor.jeff_ett_home
   - input_boolean.jeff_heading_home
-
-Jeffrey Trackers:
-  - device_tracker.jeffreystonesiphone
-  - device_tracker.owntracks_jeffreystonesiphone
-
+  - input_boolean.text_notify_jeff
+  
 Katherine:
   - device_tracker.katherinestonesiphone
   - sensor.kat_iphone_batt
   - sensor.kat_ett_home
   - input_boolean.kat_heading_home
-
-Katherine Trackers:
-  - device_tracker.katherinestonesiphone
+  - input_boolean.text_notify_kat
 
 Travel Times:
   - sensor.home_to_summit
@@ -174,7 +161,8 @@ Loft:
   - switch.loft_lamp
 
 Kitchen:
-  - switch.kitchen_accents
+  - switch.kitchen_cabinets
+  - switch.kitchen_light_strip
 
 Scenes:
   - scene.livingroom_dim
@@ -217,7 +205,7 @@ Weather Forecast:
   - sensor.dark_sky_daily_summary
 
 Temperature:
-  - sensor.dark_sky_temperature
+  - climate.first_floor
   - sensor.dark_sky_apparent_temperature
   - sensor.dark_sky_humidity
   - sensor.dark_sky_dew_point
@@ -288,21 +276,12 @@ Modes:
 Automation:
   - input_boolean.automations
 
-Notifications:
-  control: hidden
-  entities:
-  - input_boolean.audible_notifications
-  - input_boolean.text_notify_jeff
-  - input_boolean.text_notify_kat
-
 Zones:
-  - sensor.zone_3
+  - binary_sensor.zone_3
 
 Garage:
   - sensor.garage_door
-  - sensor.garage_motion
-  - sensor.accurite_garage_temperature
-  - sensor.accurite_garage_humidity
+  - binary_sensor.garage_motion
 
 Fire:
   - sensor.smoke_kitchen
@@ -330,21 +309,10 @@ File Size:
 #Zwave:
 #  - zwave.aeotec_zw090_zstick_gen5_us
 
-Alarms:
-  control: hidden
-  entities:
-  - input_boolean.garage_issue
-  - input_boolean.security_alarm
-  - input_boolean.tornado_alarm
-
 Weather Alerts:
   control: hidden
   entities:
   - sensor.pws_alerts
-
-Pollen:
-  control: hidden
-  entities:
   - sensor.allergy_index_average_forecasted
   - sensor.allergy_index_average_historical
   - sensor.allergy_index_today

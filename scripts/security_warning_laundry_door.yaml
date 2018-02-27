@@ -6,7 +6,7 @@ security_warning_front_door:
   - delay:
       seconds: 10
   - condition: state
-    entity_id: sensor.laundry_room_door
+    entity_id: binary_sensor.laundry_room_door
     state: 'open' 
   - service: tts.google_say
     data:

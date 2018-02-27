@@ -78,10 +78,10 @@
     entity_id: sensor.garage_door_contact
     to: open
   - platform: state
-    entity_id: sensor.zone_status
+    entity_id: binary_sensor.zone_status
     to: open
   - platform: state
-    entity_id: sensor.garage_motion
+    entity_id: binary_sensor.garage_motion
     to: motion
   condition:
   - condition: state

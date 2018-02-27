@@ -340,5 +340,18 @@ sensor.ha_log:
 media_player.roku_5s6719003683:
   friendly_name: Roku Living Room
   icon: mdi:youtube-tv
+
+switch.kitchen_cabinets:
+  icon: mdi:lightbulb
+switch.kitchen_light_strip:
+  icon: mdi:lightbulb
+sensor.accurite_back_porch_temperature:
+  icon: mdi:thermometer
+sensor.accurite_back_porch_humidity:
+  icon: mdi:water-percent
+sensor.accurite_garage_temperature:
+  icon: mdi:thermometer
+sensor.accurite_garage_humidity:
+  icon: mdi:water-percent
 ###### Groups #######
 

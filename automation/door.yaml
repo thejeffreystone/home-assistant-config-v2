@@ -35,7 +35,7 @@
 - alias: Back Door Opened   
   trigger:
   - platform: state
-    entity_id: sensor.zone_3
+    entity_id: binary_sensor.zone_3
     from: closed
     to: open
   condition:
@@ -49,7 +49,7 @@
 - alias: Back Door Closed
   trigger:
   - platform: state
-    entity_id: sensor.zone_3
+    entity_id: binary_sensor.zone_3
     from: open
     to: closed
   action:
@@ -149,7 +149,7 @@
 - alias: Attic Door Opened   
   trigger:
   - platform: state
-    entity_id: sensor.attic_door
+    entity_id: binary_sensor.attic_door
     from: closed
     to: open
   condition:
@@ -165,7 +165,7 @@
 - alias: Attic Door Closed
   trigger:
   - platform: state
-    entity_id: sensor.attic_door
+    entity_id: binary_sensor.attic_door
     from: open
     to: closed
   condition:
