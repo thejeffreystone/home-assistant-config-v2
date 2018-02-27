@@ -9,8 +9,8 @@
   trigger:
   - platform: state
     entity_id: group.doors
-    from: closed
-    to: open
+    from: off
+    to: on
   condition:
   - condition: state
     entity_id: input_boolean.audible_notifications
@@ -22,8 +22,8 @@
   trigger:
   - platform: state
     entity_id: group.doors
-    from: open
-    to: closed
+    from: on
+    to: off
   condition:
   - condition: state
     entity_id: input_boolean.audible_notifications
@@ -36,8 +36,8 @@
   trigger:
   - platform: state
     entity_id: binary_sensor.zone_3
-    from: closed
-    to: open
+    from: off
+    to: on
   condition:
   - condition: state
     entity_id: input_boolean.audible_notifications
@@ -50,8 +50,8 @@
   trigger:
   - platform: state
     entity_id: binary_sensor.zone_3
-    from: open
-    to: closed
+    from: on
+    to: off
   action:
   - service: homeassistant.turn_off
     entity_id: script.security_warning_back_door
