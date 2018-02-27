@@ -99,6 +99,8 @@ settings:
 #################################################################################
 ### Grops ###
 Security Status:
+  control: hidden
+  entities:
   - sensor.pws_alerts
   - sensor.garage_door
   - group.doors
@@ -109,6 +111,8 @@ Security Status:
   - input_boolean.tornado_alarm
 
 Security System:
+  control: hidden
+  entities:
   - sensor.security_status
   - input_boolean.secure_mode
 
