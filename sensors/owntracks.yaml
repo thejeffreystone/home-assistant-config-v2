@@ -10,4 +10,4 @@
   qos: 0
   unit_of_measurement: "mph"
   value_template: '{{ value_json.vel }} '
-  payload_not_available: "na"
+  payload_not_available: "0"
