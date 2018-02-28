@@ -14,7 +14,7 @@
   condition:
   - condition: state
     entity_id: binary_sensor.garage_door
-    state: open
+    state: 'on'
   action:
   - service: script.close_garage
 
@@ -25,7 +25,7 @@
   condition:
   - condition: state
     entity_id: binary_sensor.garage_door
-    state: open
+    state: 'on'
   action:
   - service: script.driveway_on
 
@@ -33,8 +33,8 @@
   trigger:
   - platform: state
     entity_id: binary_sensor.garage_door
-    from: open
-    to: closed
+    from: 'on'
+    to: 'off'
   action:
   - service: input_boolean.turn_off
     data:
@@ -85,8 +85,8 @@
   trigger:
   - platform: state
     entity_id: binary_sensor.garage_door
-    from: closed
-    to: open
+    from: 'off'
+    to: 'on'
   condition:
     - condition: state
       entity_id: sun.sun
@@ -98,8 +98,8 @@
   trigger:
   - platform: state
     entity_id: binary_sensor.garage_door
-    from: open
-    to: closed
+    from: 'on'
+    to: 'off'
   action:
   - service: homeassistant.turn_on
     entity_id: script.driveway_off
@@ -108,8 +108,8 @@
   trigger:
   - platform: state
     entity_id: binary_sensor.garage_motion
-    from: close
-    to: open
+    from: 'off'
+    to: 'on'
   condition:
     - condition: state
       entity_id: sun.sun
