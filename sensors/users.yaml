@@ -16,7 +16,7 @@
             stationary
           {%- endif %}
       icon_template: >-
-        {%- if is_state("sensor.jeff_lstatus", "moving") %}
+        {%- if is_state("sensor.jeff_status", "moving") %}
           mdi:bike
         {% else %}
           mdi:map-marker
