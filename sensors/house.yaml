@@ -7,7 +7,7 @@
 - platform: template
   sensors:
     house_status:
-      friendly_name: House Status
+      friendly_name: House
       unit_of_measurement: ''
       value_template: >-
           {%- if is_state("sensor.family_status", "away") %}

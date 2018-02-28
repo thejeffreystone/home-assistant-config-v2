@@ -130,6 +130,7 @@ House:
   control: hidden
   entities:
   - sensor.family_presence
+  - sensor.house_status
   - input_boolean.audible_notifications
   - input_boolean.guest_mode
 
