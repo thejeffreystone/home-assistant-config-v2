@@ -153,6 +153,7 @@ Jeffrey:
   - device_tracker.owntracks_jeffreystonesiphone
   - sensor.jeff_iphone_batt
   - sensor.jeff_destination
+  - sensor.jeff_lstatus
   - sensor.jeff_ett_home
   - sensor.jeff_velocity
   - input_boolean.jeff_heading_home
