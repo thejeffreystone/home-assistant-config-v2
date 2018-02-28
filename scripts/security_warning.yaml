@@ -6,4 +6,27 @@ security_warning:
   - service: tts.google_say
     data:
       entity_id: media_player.hass_speaker
-      message: Unauthorized access. Alarm will sound in 80 seconds. 
+      message: >
+          {%- if is_state("input_boolean.security_alarm", "on") %}
+              Unauthorized Access. Alarm will sound in 80 seconds.
+            {%- if is_state("binary_sensor.front_door", "on") %}
+              Front door is open
+            {%- endif %}
+            {%- if is_state("binary_sensor.zone3", "on") %}
+              Back door is open
+            {%- endif %}
+            {%- if is_state("binary_sensor.zone3", "on") %}
+              Back door is open
+            {%- endif %}    
+            {%- if is_state("binary_sensor.laundry_room_door", "on") %}
+              Laundry door is open
+            {%- endif %}
+            {%- if is_state("binary_sensor.garage_door", "on") %}
+              Garage door is open
+            {%- endif %}
+            {%- if is_state("binary_sensor.garage_motion", "on") %}
+              Motion in garage
+            {%- endif %}
+          {% else %}
+              House is secure
+          {%- endif %} 
