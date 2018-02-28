@@ -10,7 +10,7 @@
       friendly_name: Jeff is
       unit_of_measurement: ''
       value_template: >-
-          {%- if states.sensor.jeff_velocity is defined) %}
+          {%- if states.sensor.jeff_velocity is defined %}
             moving
           {% else %}
             stationary
