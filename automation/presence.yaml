@@ -8,7 +8,7 @@
 
 - alias: Family Has arrived
   trigger:
-  - entity_id: sensor.family_presence
+  - entity_id: sensor.family_status
     from: away
     platform: state
     to: home
@@ -19,7 +19,7 @@
 
 - alias: Family Has Left
   trigger:
-  - entity_id: sensor.family_presence
+  - entity_id: sensor.family_status
     from: home
     platform: state
     to: away
@@ -39,7 +39,7 @@
     to: home
   condition:
   - condition: state
-    entity_id: sensor.family_status
+    entity_id: sensor.family_presence
     state: 'away'
   action:
   - service: script.family_is_home
@@ -66,19 +66,10 @@
   action:
   - service: script.jeff_destination_arrived
   - service: script.driveway_on
-
-- alias: Jeff Arrives Home Audible
-  trigger:
-  - entity_id: device_tracker.owntracks_jeffreystonesiphone
-    event: enter
-    platform: zone
-    zone: zone.home
-  action:
-  - service: script.jeff_is_home_audible
   - service: input_boolean.turn_off
     entity_id: input_boolean.jeff_heading_home
-
-
+  - service: script.jeff_is_home_audible
+ 
 - alias: Jeff Arrives At Summit
   trigger:
   - entity_id: device_tracker.owntracks_jeffreystonesiphone
@@ -88,7 +79,6 @@
   action:
   - service: script.jeff_destination_arrived
   - service: script.jeff_at_work_notification
-
 
 - alias: Kat Arrives Home Notification
   trigger:

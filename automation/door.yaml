@@ -150,8 +150,8 @@
   trigger:
   - platform: state
     entity_id: binary_sensor.attic_door
-    from: closed
-    to: open
+    from: 'off'
+    to: 'on'
   condition:
   - condition: state
     entity_id: input_boolean.audible_notifications
@@ -166,8 +166,8 @@
   trigger:
   - platform: state
     entity_id: binary_sensor.attic_door
-    from: open
-    to: closed
+    from: 'on'
+    to: 'off'
   condition:
   - condition: state
     entity_id: input_boolean.audible_notifications
