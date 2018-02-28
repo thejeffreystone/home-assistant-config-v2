@@ -154,6 +154,7 @@ Jeffrey:
   - sensor.jeff_iphone_batt
   - sensor.jeff_destination
   - sensor.jeff_ett_home
+  - sensor.jeff_velocity
   - input_boolean.jeff_heading_home
   - input_boolean.text_notify_jeff
   
