@@ -27,3 +27,20 @@
     state: Arrived
   action:
   - service: script.jeff_destination_na
+
+- alias: Jeff is stationary
+  trigger:
+  - platform: state
+    entity_id: sensor.jeff_velocity
+    to: " "
+  action:
+  - service: script.jeff_is_stationary
+
+- alias: Jeff is moving
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.jeff_velocity
+    above: 0
+  action:
+  - service: script.jeff_is_moving
+
