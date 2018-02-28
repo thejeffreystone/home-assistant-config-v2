@@ -4,4 +4,36 @@
   payload_on: "home"
   payload_off: "away"
   retain: true
-  
+- platform: template
+sensors:
+  house_status:
+    friendly_name: House Status
+    unit_of_measurement: ''
+    value_template: >-
+        {%- if is_state("sensor.family_status", "away") %}
+            {%- if is_state("input_boolean.secure_mode", "on") %}
+              Away - Armed
+            {% else %}
+              Away
+            {%- endif %}
+        {% elif is_state("sensor.family_status", "home") %}
+            {%- if is_state("input_boolean.secure_mode", "on") %}
+              Home - Armed
+            {% else %}
+              Home
+            {%- endif %}
+        {% else %}
+            Unknown
+        {%- endif %}
+    icon_template: >-
+      {%- if is_state("sensor.house_status", "Home") %}
+        mdi:home
+      {%- elif is_state("sensor.house_status", "Away") %}
+        mdi:home-outline
+      %- elif is_state("sensor.house_status", "Away - Armed") %}
+        mdi:home-outline
+      {%- elif is_state("sensor.house_status", "Home - Armed") %}
+        mdi:home
+      {% else %}
+        mdi:sync-alert
+      {%- endif %} 
