@@ -13,7 +13,7 @@
           {%- if is_state("sensor.jeff_status", "moving") %}
             moving
           {% else %}
-            stationaryz
+            stationary
           {%- endif %}
       icon_template: >-
         {%- if is_state("sensor.jeff_status", "moving") %}
