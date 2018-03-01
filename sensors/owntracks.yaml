@@ -5,9 +5,9 @@
   unit_of_measurement: "%"
   value_template: '{{ value_json.batt }}'
 - platform: mqtt
-  name: "Jeff Velocity"
+  name: "Jeff Current Speed"
   state_topic: "owntracks/owntracks/jeffreystonesiphone"
   qos: 0
-  unit_of_measurement: "mph"
+  unit_of_measurement: "km/h"
   value_template: '{{ value_json.vel }} '
-  payload_not_available: "0"
+
