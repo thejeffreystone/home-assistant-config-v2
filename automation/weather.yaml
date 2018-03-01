@@ -46,7 +46,7 @@
     platform: state
     entity_id: sensor.pws_alerts
   action:
-  - service: script.wxalert_tile
+    - service: script.wxalert_tile
 
 - alias: Weather Warning Tornado
   trigger:
@@ -61,8 +61,8 @@
     - condition: template
       value_template: '{{ states.sensor.pws_alerts.attributes.Description_TOR == "Tornado Warning" }}'
   action:
-  - service: homeassistant.turn_on
-      entity_id: input_boolean.tornado_alarm
+    - service: homeassistant.turn_on
+        entity_id: input_boolean.tornado_alarm
 
 
 
