@@ -2,6 +2,6 @@ jeff_is_stationary:
   sequence:
     - service: mqtt.publish
       data:
-        topic: "jeff/location/current"
+        topic: "jeff/location/status"
         payload: "stationary"
         retain: true
