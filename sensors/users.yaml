@@ -2,11 +2,11 @@
   name: "Jeff Destination"
   state_topic: "jeff/driving/destination"
 - platform: mqtt
-  name: "Jeff Status"
+  name: "Jeff Location"
   state_topic: "jeff/location/status"
 - platform: template
   sensors:
-    jeff_lstatus:
+    jeff_status:
       friendly_name: Jeff is
       unit_of_measurement: ''
       value_template: >-
