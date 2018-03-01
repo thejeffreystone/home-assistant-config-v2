@@ -9,7 +9,7 @@ wxalert_tile:
     ## Create a new persistant notification in the UI for a new alert
   - service_template: >
       {% if states.sensor.pws_alerts.attributes.Message %}
-      persistent_notification.create
+        persistent_notification.create
       {% endif %}
     data_template:
       notification_id: "wxalert"

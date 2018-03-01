@@ -4,6 +4,7 @@ default_view:
     view: yes
     icon: mdi:home
     entities:
+      - persistent_notification.wxalert
       - group.house
       - group.security_system
       - group.security_alerts
