@@ -30,9 +30,9 @@
 
 - alias: Jeff is stationary
   trigger:
-  - platform: state
+  - platform: numeric_state
     entity_id: sensor.jeff_velocity
-    to: " "
+    below: 1
   action:
   - service: script.jeff_is_stationary
 
