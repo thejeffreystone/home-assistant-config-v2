@@ -157,6 +157,12 @@ Jeffrey:
   - sensor.jeff_ett_home
   - input_boolean.jeff_heading_home
   - input_boolean.text_notify_jeff
+
+Jeffrey Location:
+  control: hidden
+  entities:
+  - device_tracker.owntracks_jeffreystonesiphone
+  - device_tracker.jeffreystonesiphone
   
 Katherine:
   control: hidden

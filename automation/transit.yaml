@@ -19,8 +19,8 @@
 - alias: Jeff no destination
   trigger:
   - platform: state
-    entity_id: sensor.jeffrey_location
-    to: Moving
+    entity_id: sensor.jeff_status
+    to: 'moving'
   condition:
   - condition: state
     entity_id: sensor.jeff_destination
@@ -35,6 +35,7 @@
     below: 1
   action:
   - service: script.jeff_is_stationary
+  - service: script.jeff_destination_arrived
 
 - alias: Jeff is moving
   trigger:
@@ -43,4 +44,5 @@
     above: 0
   action:
   - service: script.jeff_is_moving
+
 

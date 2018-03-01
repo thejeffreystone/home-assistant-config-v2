@@ -3,7 +3,7 @@
   state_topic: "jeff/driving/destination"
 - platform: mqtt
   name: "Jeff Location"
-  state_topic: "jeff/location/status"
+  state_topic: "jeff/location/current"
 - platform: template
   sensors:
     jeff_status:
