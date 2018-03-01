@@ -46,7 +46,7 @@
     platform: state
     entity_id: sensor.pws_alerts
   action:
-    - service: script.wxalert_tile
+    - entity_id: script.wxalert_tile
 
 - alias: Weather Warning Tornado
   trigger:
