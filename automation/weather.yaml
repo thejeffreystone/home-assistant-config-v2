@@ -50,19 +50,19 @@
 
 - alias: Weather Warning Tornado
   trigger:
-    - platform: numeric_state
-      entity_id: sensor.pws_alerts
-      above: 1
+  - platform: numeric_state
+    entity_id: sensor.pws_alerts
+    above: 1
   condition:
-     condition: or
-     conditions:
-       - condition: template
-         value_template: '{{ states.sensor.pws_alerts.attributes.Description == "Tornado Warning" }}'
-       - condition: template
-         value_template: '{{ states.sensor.pws_alerts.attributes.Description_TOR == "Tornado Warning" }}'
+  condition: or
+  conditions:
+  - condition: template
+    value_template: '{{ states.sensor.pws_alerts.attributes.Description == "Tornado Warning" }}'
+  - condition: template
+    value_template: '{{ states.sensor.pws_alerts.attributes.Description_TOR == "Tornado Warning" }}'
   action:
-    - service: homeassistant.turn_on
-        entity_id: input_boolean.tornado_alarm
+  - service: homeassistant.turn_on
+      entity_id: input_boolean.tornado_alarm
 
 
 
