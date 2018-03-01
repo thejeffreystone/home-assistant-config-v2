@@ -35,7 +35,6 @@
     below: 1
   action:
   - service: script.jeff_is_stationary
-  - service: script.jeff_destination_arrived
 
 - alias: Jeff is moving
   trigger:
