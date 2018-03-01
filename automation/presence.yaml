@@ -59,16 +59,19 @@
 
 - alias: Jeff Arrives Home
   trigger:
-  - entity_id: device_tracker.owntracks_jeffreystonesiphone
-    event: enter
-    platform: zone
-    zone: zone.home
+  # - entity_id: device_tracker.owntracks_jeffreystonesiphone
+  #   event: enter
+  #   platform: zone
+  #   zone: zone.home
+  - entity_id: group.jeffrey_trackers
+    from: not_home
+    platform: state
+    to: home
   action:
   - service: script.jeff_destination_arrived
   - service: script.driveway_on
   - service: input_boolean.turn_off
     entity_id: input_boolean.jeff_heading_home
-  - service: script.jeff_is_home_audible
  
 - alias: Jeff Arrives At Summit
   trigger:
