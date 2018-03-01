@@ -42,8 +42,8 @@
       entity_id: script.tornado_alarm
 
 - alias: Wx Alert Notification
-  - trigger:
-    platform: state
+  trigger:
+  - platform: state
     entity_id: sensor.pws_alerts
   action:
     - entity_id: script.wxalert_tile
