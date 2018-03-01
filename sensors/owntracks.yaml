@@ -5,7 +5,7 @@
   unit_of_measurement: "%"
   value_template: '{{ value_json.batt }}'
 - platform: mqtt
-  name: "Jeff Current Speed"
+  name: "Jeff Velocity"
   state_topic: "owntracks/owntracks/jeffreystonesiphone"
   qos: 0
   unit_of_measurement: "km/h"

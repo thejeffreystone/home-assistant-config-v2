@@ -152,7 +152,7 @@ Jeffrey:
   entities:
   - device_tracker.owntracks_jeffreystonesiphone
   - sensor.jeff_lstatus
-  - sensor.jeff_current_speed
+  - sensor.jeff_velocity
   - sensor.jeff_destination
   - sensor.jeff_iphone_batt
   - sensor.jeff_ett_home

@@ -363,7 +363,5 @@ sensor.accurite_garage_humidity:
   unit_of_measurement: '%'
 binary_sensor.garage_dome_sensor:
   friendly_name: Garage Motion
-sensor.jeff_current_speed:
-  friendly_name: "Jeff's Current Speed"
 ###### Groups #######
 
