@@ -44,10 +44,6 @@
         friendly_name: "Kat's Mini"
         value_template: "{{ 'Online' if is_state('device_tracker.katherinesmini', 'home') else 'Offline' }}"
 
-      jeffrey_location:
-        friendly_name: "Jeffrey's Location"
-        value_template: "{{ 'moving' if is_state('device_tracker.owntracks_jeffreystonesiphone', 'not_home') else states.device_tracker.owntracks_jeffreystonesiphone.state }}"
-
       jeff_mbp:
         friendly_name: "Jeff's MBP"
         value_template: "{{ 'Online' if is_state('device_tracker.jeffreysmbp', 'home') else 'Offline' }}"
