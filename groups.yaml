@@ -151,11 +151,10 @@ Jeffrey:
   control: hidden
   entities:
   - device_tracker.owntracks_jeffreystonesiphone
-  - sensor.jeff_iphone_batt
+  - sensor.jeff_status
   - sensor.jeff_destination
-  - sensor.jeff_lstatus
+  - sensor.jeff_iphone_batt
   - sensor.jeff_ett_home
-  - sensor.jeff_velocity
   - input_boolean.jeff_heading_home
   - input_boolean.text_notify_jeff
   
