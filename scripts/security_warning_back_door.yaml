@@ -1,13 +1,7 @@
 security_warning_back_door:
   sequence:
-  - service: notify.jeff_ios
-    data:
-      message: 'Notification: Back Door'
   - delay:
       seconds: 5
-  - condition: state
-    entity_id: binary_sensor.back_door
-    state: 'on' 
   - service: tts.google_say
     data:
       entity_id: media_player.hass_speaker
