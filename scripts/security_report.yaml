@@ -8,12 +8,9 @@ security_report:
             {%- if is_state("binary_sensor.front_door", "on") %}
               Front door is open
             {%- endif %}
-            {%- if is_state("binary_sensor.zone3", "on") %}
+            {%- if is_state("binary_sensor.back_door", "on") %}
               Back door is open
             {%- endif %}
-            {%- if is_state("binary_sensor.zone3", "on") %}
-              Back door is open
-            {%- endif %}    
             {%- if is_state("binary_sensor.laundry_room_door", "on") %}
               Laundry door is open
             {%- endif %}
