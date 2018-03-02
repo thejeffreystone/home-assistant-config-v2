@@ -166,4 +166,4 @@ shell_command:
   tornado_alarm: mpg123 /media/audio/Tornado_Siren.mp3
   door_chime: mpg123 /media/audio/Store_Door_Chime.mp3
   security_alarm: mpg123 /media/audio/security_siren.mp3
-  
+  security_alarm_intro: mpg123 /media/audio/Siren_Noise.mp3

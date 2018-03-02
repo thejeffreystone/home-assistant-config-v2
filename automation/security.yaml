@@ -175,7 +175,11 @@
     to: 'on'
   action:
   - service: homeassistant.turn_on
+    entity_id: script.security_sound_alarm_intro
+  - service: homeassistant.turn_on
     entity_id: script.security_sound_alarm
+  - service: homeassistant.turn_on
+    entity_id: script.security_report
 
 
 - alias: Security Alarm Deactivated
@@ -188,6 +192,10 @@
     entity_id: script.security_sound_alarm
   - service: script.access_authorized    
   - service: script.standby
+  - service: homeassistant.turn_off
+    entity_id: script.security_sound_alarm_intro
+  - service: homeassistant.turn_off
+    entity_id: script.security_report
 
 - alias: Security Issue Resolved
   trigger:
