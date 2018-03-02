@@ -35,7 +35,7 @@
 - alias: Back Door Opened   
   trigger:
   - platform: state
-    entity_id: binary_sensor.zone_3
+    entity_id: binary_sensor.back_door
     from: 'off'
     to: 'on'
   condition:
@@ -49,7 +49,7 @@
 - alias: Back Door Closed
   trigger:
   - platform: state
-    entity_id: binary_sensor.zone_3
+    entity_id: binary_sensor.back_door
     from: 'on'
     to: 'off'
   action:
