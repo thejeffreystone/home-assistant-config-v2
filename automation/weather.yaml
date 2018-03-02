@@ -46,4 +46,4 @@
   - platform: state
     entity_id: sensor.pws_alerts
   action:
-    - entity_id: script.wxalert_tile
+    - service: script.wxalert_tile
