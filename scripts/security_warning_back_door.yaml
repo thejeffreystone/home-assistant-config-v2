@@ -4,10 +4,10 @@ security_warning_back_door:
     data:
       message: 'Notification: Back Door'
   - delay:
-      seconds: 10
+      seconds: 5
   - condition: state
     entity_id: binary_sensor.back_door
-    state: 'open' 
+    state: 'on' 
   - service: tts.google_say
     data:
       entity_id: media_player.hass_speaker

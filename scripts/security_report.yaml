@@ -1,5 +1,7 @@
 security_report:
   sequence:
+    - delay:
+      seconds: 9
     - service: tts.google_say
       data_template:
         entity_id: media_player.hass_speaker
