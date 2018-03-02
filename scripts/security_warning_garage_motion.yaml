@@ -1,11 +1,12 @@
 security_warning_garage_motion:
   sequence:
-  - service: notify.jeff_ios
-    data:
-      message: 'Alarm: Garage Motion'
+  - event: LOGBOOK_ENTRY
+    event_data:
+      name: EVENT
+      message: "Warning: Motion in Garage"
+  - delay:
+      seconds: 5
   - service: tts.google_say
     data:
       entity_id: media_player.hass_speaker
-      message: I have detected motion in the Garage. Attempting to verify.
-  - service: input_boolean.turn_on
-    entity_id: input_boolean.security_alarm
+      message: Motion in Garage

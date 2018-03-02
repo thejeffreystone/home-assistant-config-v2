@@ -1,13 +1,11 @@
 security_warning_front_door:
   sequence:
-  - service: notify.jeff_ios
-    data:
-      message: 'Notification: Laundry Door'
+  - event: LOGBOOK_ENTRY
+    event_data:
+      name: EVENT
+      message: "Warning: Laundry room door open"
   - delay:
-      seconds: 10
-  - condition: state
-    entity_id: binary_sensor.laundry_room_door
-    state: 'open' 
+      seconds: 5
   - service: tts.google_say
     data:
       entity_id: media_player.hass_speaker
