@@ -20,11 +20,12 @@
     data:
       message: Cloudy, turning on LR Lamp
 
-  - alias: Cloudy porch on early
+- alias: Cloudy porch on early
   trigger:
   - platform: sun
     event: sunset
     offset: -01:30:00
+  condition:
   - condition: numeric_state
     entity_id: sensor.dark_sky_cloud_coverage
     above: 70
