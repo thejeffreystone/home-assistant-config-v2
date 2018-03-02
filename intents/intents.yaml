@@ -23,7 +23,7 @@ IsTheHouseSecure:
   speech:
     type: plain
     text: >
-      {%- if is_state('sensor.zone_3', 'open') -%}
+      {%- if is_state('binary_sensor.zone_3', 'on') -%}
         Zone 3 is currently open.
       {%- else -%}
         Zone 3 is closed
@@ -91,7 +91,7 @@ WhereIsJeff:
   speech:
     type: plain
     text: >
-      {%- if is_state('sensor.jeffrey_location', 'home') -%}
+      {%- if is_state('device_tracker.owntracks_jeffreystonesiphone', 'home') -%}
         Jeff is here somewhere. Where was the last place you saw him?
       {%- else -%}
         {%- if is_state('sensor.jeffrey_location', 'moving') -%}
