@@ -63,7 +63,7 @@
   #   event: enter
   #   platform: zone
   #   zone: zone.home
-  - entity_id: sensor_jeff_presence
+  - entity_id: sensor.jeff_presence
     from: 'not present'
     platform: state
     to: 'present'
