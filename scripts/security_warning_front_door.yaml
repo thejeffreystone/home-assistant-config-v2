@@ -1,10 +1,7 @@
 security_warning_front_door:
   sequence:
-  - delay:
-      seconds: 10
-  - condition: state
-    entity_id: binary_sensor.front_door
-    state: 'open' 
+  delay:
+    seconds: 10
   - service: tts.google_say
     data:
       entity_id: media_player.hass_speaker
