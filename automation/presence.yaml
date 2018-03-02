@@ -63,10 +63,10 @@
   #   event: enter
   #   platform: zone
   #   zone: zone.home
-  - entity_id: group.jeffrey_trackers
-    from: not_home
+  - entity_id: sensor_jeff_presence
+    from: 'not present'
     platform: state
-    to: home
+    to: 'present'
   action:
   - service: script.jeff_destination_arrived
   - service: script.driveway_on
