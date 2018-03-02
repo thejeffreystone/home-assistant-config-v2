@@ -1,8 +1,5 @@
 security_warning_front_door:
   sequence:
-  - service: notify.jeff_ios
-    data:
-      message: 'Notification: Front Door'
   - delay:
       seconds: 10
   - condition: state
