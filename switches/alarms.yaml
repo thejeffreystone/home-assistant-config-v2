@@ -1,9 +1,0 @@
-- platform: mqtt
-  name: "Garage Alarm"
-  command_topic: "hass/garage/alarm"
-  state_topic: "hass/garage/alarm"
-  qos: 1
-  payload_on: "on"
-  payload_off: "off"
-  retain: true
-

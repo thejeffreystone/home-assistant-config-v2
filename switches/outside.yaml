@@ -13,16 +13,9 @@
   payload_off: "off"
   retain: true
 - platform: mqtt
-  name: "Front Porch Left"
-  state_topic: "smartthings/Front Porch 1/switch"
-  command_topic: "smartthings/Front Porch 1/switch"
-  payload_on: "on"
-  payload_off: "off"
-  retain: true
-- platform: mqtt
-  name: "Front Porch Right"
-  state_topic: "smartthings/Front Porch 2/switch"
-  command_topic: "smartthings/Front Porch 2/switch"
+  name: "Front Porch"
+  state_topic: "smartthings/Front Porch/switch"
+  command_topic: "smartthings/Front Porch/switch"
   payload_on: "on"
   payload_off: "off"
   retain: true

@@ -182,10 +182,17 @@ Travel Times:
 Living Room:
   - switch.fireplace_lights
   - light.tower_lamp
-  - switch.strip_cord_1
+  - switch.front_lamp
 
 Loft:
   - switch.loft_lamp
+
+Master Bedroom:
+  - switch.master_fan
+
+Laundry Room:
+  - switch.washer
+  - sensor.washer_power
 
 Kitchen:
   - switch.kitchen_cabinets
@@ -200,15 +207,14 @@ Scenes:
 Outside Lights:
   - switch.driveway_light
   - switch.side_door
-  - group.front_porch
+  - switch.front_porch
 
 Driveway:
   - switch.driveway_light
   - switch.side_door
   
 Front Porch:
-  - switch.front_porch_left
-  - switch.front_porch_right
+  - switch.front_porch
 
 Thermostat:
   - climate.first_floor

@@ -213,16 +213,13 @@ switch.driveway_light:
 switch.side_door:
   icon: mdi:lightbulb
 
-switch.front_porch_left:
+switch.front_porch:
   icon: mdi:lightbulb
 
-switch.front_porch_right:
+switch.front_lamp:
   icon: mdi:lightbulb
 
 switch.loft_lamp:
-  icon: mdi:lightbulb
-
-switch.kitchen_accents:
   icon: mdi:lightbulb
 
 cover.garage_door:
@@ -241,12 +238,8 @@ sensor.pws_alerts:
   friendly_name: "Weather Alerts"
   icon: mdi:alert
 
-sensor.zone_3:
-  friendly_name: "Zone 3"
-  icon: mdi:glassdoor
-
-switch.strip_cord_1:
-  friendly_name: "Strip Cord 1"
+switch.master_fan:
+  friendly_name: "Master Box Fan"
   icon: mdi:power-plug
 
 switch.house_secured:
@@ -363,5 +356,12 @@ sensor.accurite_garage_humidity:
   unit_of_measurement: '%'
 binary_sensor.garage_dome_sensor:
   friendly_name: Garage Motion
+
+sensor.washer_power:
+  friendly_name: Washer Power
+  icon: mdi:plug
+  unit_of_measurement: 'w'
+sensor.washer:
+  icon: mdi:plug
 ###### Groups #######
 

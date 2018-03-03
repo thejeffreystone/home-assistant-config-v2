@@ -1,7 +1,0 @@
-- platform: mqtt
-  name: "Loft Lamp"
-  state_topic: "smartthings/Stairs Rail/switch"
-  command_topic: "smartthings/Stairs Rail/switch"
-  payload_on: "on"
-  payload_off: "off"
-  retain: true

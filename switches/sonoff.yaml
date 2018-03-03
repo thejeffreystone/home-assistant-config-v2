@@ -1,5 +1,5 @@
 - platform: mqtt
-  name: "Strip Cord 1"
+  name: "Master Fan"
   command_topic: "cmnd/sonoff/power"
   state_topic: "stat/sonoff/POWER"
   qos: 1

@@ -8,3 +8,13 @@
   payload_on: "on"
   payload_off: "off"
   retain: true
+- platform: mqtt
+  name: "Front Lamp"
+  state_topic: "smartthings/Front Lamp/switch"
+  command_topic: "smartthings/Front Lamp/switch"
+  brightness_state_topic: "smartthings/Front Lamp/level"
+  brightness_command_topic: "smartthings/Front Lamp/level"
+  brightness_scale: 101
+  payload_on: "on"
+  payload_off: "off"
+  retain: true
