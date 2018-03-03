@@ -21,7 +21,7 @@ lights:
     - group.living_room
     - group.master_bedroom
     - group.loft
-    - group.laundry
+    - group.laundry_room
     - group.driveway
     - group.front_porch
     - group.kitchen
