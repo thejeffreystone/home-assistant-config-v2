@@ -14,9 +14,6 @@
   action:
   - service: scene.turn_on
     entity_id: scene.livingroom_normal
-  - service: switch.turn_on
-    data:
-      entity_id: switch.strip_cord_1
   - service: notify.ios_jeffreystonesiphone
     data:
       message: Good Morning, Anchorage House is up and online.
@@ -30,12 +27,6 @@
   action:
   - service: scene.turn_on
     entity_id: scene.livingroom_night
-  - service: switch.turn_off
-    data:
-      entity_id: switch.strip_cord_1
-  - service: switch.turn_off
-    data:
-      entity_id: switch.rail_lights
   - service: notify.jeff_ios
     data:
       message: House shutting down for the night, Good Night
@@ -48,10 +39,7 @@
   action:
   - service: switch.turn_on
     data:
-      entity_id: switch.front_porch_left
-  - service: switch.turn_on
-    data:
-      entity_id: switch.front_porch_right
+      entity_id: switch.front_porch
 
 - alias: Sunrise Front Porch off
   trigger:
@@ -60,11 +48,7 @@
   action:
   - service: switch.turn_off
     data:
-      entity_id: switch.front_porch_left
-  - service: switch.turn_off
-    data:
-      entity_id: switch.front_porch_right
-
+      entity_id: switch.front_porch
 
 - alias: Sunset Inside on
   trigger:

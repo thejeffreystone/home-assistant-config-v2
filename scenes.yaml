@@ -3,9 +3,15 @@
     light.tower_lamp:
       state: on
       brightness: 100
+    light.front_lamp:
+      state: on
+      brightness: 100
 - name: livingroom dim
   entities:
     light.tower_lamp:
+      state: on
+      brightness: 40
+    light.front_lamp:
       state: on
       brightness: 40
 - name: livingroom night
@@ -13,9 +19,11 @@
     light.tower_lamp:
       state: on
       brightness: 10
+    light.front_lamp:
+      state: off
 - name: movie time
   entities:
     light.tower_lamp:
       state: off
-    switch.strip_cord_1:
+    light.front_lamp:
       state: off

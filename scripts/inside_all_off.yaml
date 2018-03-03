@@ -7,6 +7,6 @@ inside_all_off:
   - service: light.turn_off
     data:
       entity_id: light.tower_lamp
-  - service: switch.turn_off
+  - service: light.turn_off
     data:
-      entity_id: switch.strip_cord_1
+      entity_id: light.front_lamp
