@@ -359,9 +359,9 @@ binary_sensor.garage_dome_sensor:
 
 sensor.washer_power:
   friendly_name: Washer Power
-  icon: mdi:plug
+  icon: mdi:power-plug
   unit_of_measurement: 'w'
 sensor.washer:
-  icon: mdi:plug
+  icon: mdi:power-plug
 ###### Groups #######
 

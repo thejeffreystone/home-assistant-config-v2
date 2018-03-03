@@ -19,7 +19,9 @@ lights:
   icon: mdi:lightbulb
   entities:
     - group.living_room
+    - group.master_bedroom
     - group.loft
+    - group.laundry
     - group.driveway
     - group.front_porch
     - group.kitchen
@@ -182,10 +184,10 @@ Travel Times:
 Living Room:
   - switch.fireplace_lights
   - light.tower_lamp
-  - switch.front_lamp
+  - light.front_lamp
 
 Loft:
-  - switch.loft_lamp
+  - light.loft_lamp
 
 Master Bedroom:
   - switch.master_fan
