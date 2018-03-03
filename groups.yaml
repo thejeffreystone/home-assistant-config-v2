@@ -193,12 +193,12 @@ Master Bedroom:
   - switch.master_fan
 
 Laundry Room:
-  - switch.washer
+  #- switch.washer
   - sensor.washer_power
 
 Kitchen:
-  - switch.kitchen_cabinets
-  - switch.kitchen_light_strip
+  - light.kitchen_cabinets
+  - light.kitchen_light_strip
 
 Scenes:
   - scene.livingroom_dim
