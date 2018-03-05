@@ -36,7 +36,7 @@
 
 - alias: Washer Complete 
   trigger:
-  - platform: numeric_power
+  - platform: numeric_state
     entity_id: sensor.washer_status
     from: 'running'
     to: 'idle'
