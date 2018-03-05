@@ -6,7 +6,7 @@ default_view:
     entities:
       - persistent_notification.wxalert
       - group.house
-      - group.hvac
+      - group.thermostat
       - group.garage
       - group.appliances
       - group.weather_alerts
@@ -277,11 +277,6 @@ Internet:
   - sensor.speedtest_download
   - sensor.speedtest_upload
 
-Hvac:
-  - sensor.hvac_first_temp
-  - sensor.hvac_first_current_temp
-  - sesnor.hvac_first_mode
-
 Home Automation:
   - sensor.smartthings
   - sensor.amazon_dot_lr
@@ -321,7 +316,7 @@ Zones:
 
 Garage:
   - cover.garage_door
-  - binary_sensor.garage_motion
+  - binary_sensor.garage_dome_sensor
   - sensor.accurite_garage_temperature
   - sensor.accurite_garage_humidity
 
