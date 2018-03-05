@@ -27,3 +27,13 @@
       state: off
     light.front_lamp:
       state: off
+- name: dim kitchen
+  entities:
+    light.kitchen_cabinets:
+      state: on
+      brightness: 40
+- name: normal kitchen
+  entities:
+    light.kitchen_cabinets:
+      state: on
+      brightness: 100    
