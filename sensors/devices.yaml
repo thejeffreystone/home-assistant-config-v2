@@ -89,7 +89,7 @@
           {% else %}
             idle
           {%endif %}
-        icon_template: mdi:washing_machine
+        icon_template: mdi:washing-machine
 
 
       
