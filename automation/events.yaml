@@ -55,8 +55,8 @@
     entity_id: input_boolean.washer_notification
     state: 'on'
   condition:
-  - entity_id: sensor.family_status
-    platform: state
+  - condition: state
+    entity_id: sensor.family_status
     state: home
   action:
   - service: script.washer_finished_notification
