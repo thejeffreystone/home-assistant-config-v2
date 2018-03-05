@@ -47,7 +47,6 @@
     - service: homeassistant.turn_off
       entity_id: script.tornado_alarm
 
-
 - alias: Sound Audible Tornado Alarm
   trigger:
   - platform: state
