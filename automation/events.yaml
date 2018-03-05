@@ -53,7 +53,7 @@
   trigger:
   - platform: state
     entity_id: input_boolean.washer_notification
-    state: 'on'
+    to: 'on'
   - condition: state
     entity_id: sensor.family_status
     state: home
