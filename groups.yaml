@@ -20,7 +20,7 @@ security:
     - group.security_system
     - group.security_alerts
     - group.doors 
-    - group.motion
+    - group.motion_sensors
     - group.fire
       
 lights:
