@@ -7,9 +7,6 @@ garage_abort_lockdown:
   - condition: state
     entity_id: input_boolean.secure_mode
     state: "on"
-  #- service: notify.jeff_ios
-  #  data:
-  #    message: 'WARN: Aborting Lockdown. Garage Could not Close'
   - service: tts.google_say
     data:
       entity_id: media_player.hass_speaker
