@@ -88,7 +88,6 @@
           {%- endif %}
         icon_template: mdi:message-alert
 
-
       tornado_watch:
         friendly_name: 'Tornado Watch'
         value_template: >-
