@@ -66,6 +66,9 @@ kat_heading_home:
 jeff_heading_home:
   name: Jeff Heading Home
   icon: mdi:car
-washer_done:
-  name: Washer Finished
+washer_notification:
+  name: Washer Notification
+  icon: mdi:speaker-wireless
+washer_running:
+  name: Washer Running
   icon: mdi:speaker-wireless

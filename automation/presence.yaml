@@ -16,6 +16,7 @@
   - service: script.standby
   - service: script.driveway_on
   - service: script.vacation_canceled
+  - service: script.washer_finished_notification
 
 - alias: Family Has Left
   trigger:
