@@ -74,3 +74,53 @@
 - platform: mqtt
   name: "Accurite Garage lupdate"
   state_topic: "house/accurite-10968/lastupdate"
+- platform: template
+  sensors:
+      tornado_warning:
+        friendly_name: 'Tornado Warning'
+        value_template: >-
+          {%-  if is_state("sensor.pws_alerts.attributes.Description", "Tornado Warning") %}
+            active
+          {% elif is_state("sensor.pws_alerts.attributes.Description_TOR", "Tornado Warning") %}
+            active
+          {% else %}
+            inactive
+          {%- endif %}
+        icon_template: mdi:message-alert
+
+
+      tornado_watch:
+        friendly_name: 'Tornado Watch'
+        value_template: >-
+          {%-  if is_state("sensor.pws_alerts.attributes.Description", "Tornado Watch") %}
+            active
+          {% elif is_state("sensor.pws_alerts.attributes.Description_TOW", "Tornado Watch") %}
+            active
+          {% else %}
+            inactive
+          {%- endif %}
+        icon_template: mdi:message-alert
+
+      tstorm_warning:
+        friendly_name: 'T-Storm Warning'
+        value_template: >-
+          {%-  if is_state("sensor.pws_alerts.attributes.Description", "Severe Thunderstorm Warning") %}
+            active
+          {% elif is_state("sensor.pws_alerts.attributes.Description_WRN", "Severe Thunderstorm Warning") %}
+            active
+          {% else %}
+            inactive
+          {%- endif %}
+        icon_template: mdi:message-alert 
+
+      storm_statement:
+        friendly_name: 'Storm Statement'
+        value_template: >-
+          {%-  if is_state("sensor.pws_alerts.attributes.Description", "Severe Weather Statement") %}
+            active
+          {% elif is_state("sensor.pws_alerts.attributes.Description_SVR", "Severe Weather Statement") %}
+            active
+          {% else %}
+            inactive
+          {%- endif %}
+        icon_template: mdi:message-alert   
