@@ -19,7 +19,9 @@ security:
   entities:
     - group.security_system
     - group.security_alerts
-    - group.security_status
+    - group.doors 
+    - group.motion
+    - group.fire
       
 lights:
   name: Lights
@@ -136,10 +138,15 @@ House:
   - input_boolean.audible_notifications
   - input_boolean.guest_mode
 
+Motion Sensors:
+  - binary_sensor.garage_dome_sensor
+
 Doors:
   - binary_sensor.back_door
   - binary_sensor.front_door
   - binary_sensor.laundry_room_door
+  - binary_sensor.attic_door
+  - binary_sensor.garage_door
 
 Attic:
   - binary_sensor.attic_door
