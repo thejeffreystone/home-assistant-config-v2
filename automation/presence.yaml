@@ -17,6 +17,7 @@
   - service: script.driveway_on
   - service: script.vacation_canceled
   - service: script.washer_finished_notification
+  - service: script.appliances_on
 
 - alias: Family Has Left
   trigger:
@@ -31,6 +32,7 @@
   action:
   - service: script.close_garage
   - service: script.lockdown
+  - service: script.appliances_off
 
 - alias: Family Devices Have arrived
   trigger:
