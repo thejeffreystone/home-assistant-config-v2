@@ -80,4 +80,16 @@
       garage_motion:
         friendly_name: "Garage Motion"
         value_template: "{{ 'open' if is_state('sensor.garage_dome_sensor', 'motion') else 'clear' }}"
+
+      washer_status:
+        friendly_name: "Washer Status"
+        value_template: >-
+          {% if states('sensor.washer_power') | float > 0 %}
+            running
+          {% else %}
+            idle
+          {%endif %}
+        
+
+
       
