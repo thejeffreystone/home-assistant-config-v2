@@ -54,7 +54,6 @@
   - platform: state
     entity_id: input_boolean.washer_notification
     state: 'on'
-  condition:
   - condition: state
     entity_id: sensor.family_status
     state: home
