@@ -7,7 +7,7 @@ default_view:
       - persistent_notification.wxalert
       - group.house
       - group.garage_door
-      - group.applicances
+      - group.appliances
       - group.weather_alerts
       - group.temperature
 
