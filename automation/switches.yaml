@@ -7,19 +7,19 @@
 - alias: "Kitchen - Turn Off Lights"
   trigger:
     - platform: state
-      entity_id: switch.kitchen_cabinets
+      entity_id: light.kitchen_cabinets
       to: 'off'
   action:
-    - service: switch.turn_off
+    - service: light.turn_off
       data:
-        entity_id: switch.kitchen_light_strip
+        entity_id: light.kitchen_light_strip
 
 - alias: "Kitchen - Turn On Lights"
   trigger:
     - platform: state
-      entity_id: switch.kitchen_cabinets
+      entity_id: light.kitchen_cabinets
       to: 'on'
   action:
-    - service: switch.turn_on
+    - service: light.turn_on
       data:
-        entity_id: switch.kitchen_light_strip
+        entity_id: light.kitchen_light_strip

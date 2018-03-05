@@ -197,6 +197,8 @@ Scenes:
   - scene.livingroom_night
   - scene.livingroom_normal
   - scene.movie_time
+  - scene.dim_kitchen
+  - scene.normal_kitchen
 
 Outside Lights:
   - switch.driveway_light
