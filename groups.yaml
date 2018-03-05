@@ -6,12 +6,18 @@ default_view:
     entities:
       - persistent_notification.wxalert
       - group.house
-      - group.security_system
-      - group.security_alerts
-      - group.security_status
       - group.garage_door
       - group.weather_alerts
       - group.temperature
+
+security:
+  name: Security
+  view: yes
+  icon: mdi:security
+  entities:
+    - group.security_system
+    - group.security_alerts
+    - group.security_status
       
 lights:
   name: Lights
@@ -79,20 +85,6 @@ chores:
   icon: mdi:calendar
   entities:
     - group.trash_schedule
-
-security:
-  name: Security
-  view: yes
-  icon: mdi:security
-  entities:
-    - group.house
-    - group.security_system
-    - group.securty_alerts
-    - group.security_status
-    - group.fire
-    - group.doors
-    - group.attic
-    - group.garage
 
 settings:
   name: Settings
