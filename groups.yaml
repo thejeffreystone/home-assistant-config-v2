@@ -28,7 +28,6 @@ lights:
     - group.living_room
     - group.master_bedroom
     - group.loft
-    - group.laundry_room
     - group.driveway
     - group.front_porch
     - group.kitchen
@@ -54,6 +53,13 @@ media:
     - media_player.living_room_tv
     - media_player.roku_5s6719003683
     - media_player.guest_tv
+
+power:
+  name: power usage
+  view: yes
+  icon: mdi:power-plug
+  entities:
+    - group.laundry_room
 
 weather:
   name: weather
