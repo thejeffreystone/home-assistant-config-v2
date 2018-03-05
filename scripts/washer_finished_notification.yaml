@@ -1,13 +1,8 @@
 washer_finished_notification:
   sequence:
-  - condition: and
-      conditions:
-        - condition: state
-          entity_id: sensor.family_status
-          state: home
-        - condition: state
-          entity_id: input_boolean.washer_notification
-          state: 'on'
+  - condition: state
+    entity_id: input_boolean.washer_notification
+    state: 'on'
   - delay:
       minutes: 3
   - service: notify.jeff_ios
