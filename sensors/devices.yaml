@@ -84,7 +84,7 @@
       washer_status:
         friendly_name: "Washer Status"
         value_template: >-
-          {% if states('sensor.washer_power') | float > 0 %}
+          {% if states('sensor.washer_power') | float > 2 %}
             running
           {% else %}
             idle
