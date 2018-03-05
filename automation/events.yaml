@@ -38,8 +38,8 @@
   trigger:
   - platform: state
     entity_id: sensor.washer_status
-    from: running
-    to: idle
+    from: 'running'
+    to: 'idle'
   - condition: state
     entity_id: input_boolean.washer_running
     state: 'on'
