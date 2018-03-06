@@ -358,9 +358,9 @@ Weather Alerts:
   control: hidden
   entities:
   - sensor.storm_statement
-  - sensor.tstoem_warning
+  - sensor.tstorm_warning
   - sensor.tornado_watch
-  - sensor.torndao_warning
+  - sensor.tornado_warning
 
 Pollen Forecast:
   control: hidden
