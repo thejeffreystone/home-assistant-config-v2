@@ -12,7 +12,4 @@ outside_all_off:
       entity_id: switch.side_door_light
   - service: switch.turn_off
     data:
-      entity_id: switch.front_porch_left
-  - service: switch.turn_off
-    data:
-      entity_id: switch.front_porch_right
+      entity_id: switch.front_porch
