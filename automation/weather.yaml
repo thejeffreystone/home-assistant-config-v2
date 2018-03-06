@@ -57,6 +57,15 @@
     - service: homeassistant.turn_on
       entity_id: script.tornado_alarm
 
+- alias: Tornado Warning
+  trigger:
+  - platform: state
+    entity_id: sensor.tornado_warning
+    to: "active"
+  action:
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.tornado_alarm
+
 - alias: Wx Alert Notification
   trigger:
   - platform: state

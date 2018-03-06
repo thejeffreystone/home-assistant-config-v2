@@ -58,7 +58,6 @@
   action:
     service: script.inside_all_on
 
-
 - alias: Sunrise Inside off
   trigger:
   - platform: sun
