@@ -10,6 +10,7 @@ default_view:
       - group.garage
       - group.appliances
       - group.weather_alerts
+      - group.pollen_forecast
       - group.outside_temp
 
 security:
@@ -356,7 +357,14 @@ File Size:
 Weather Alerts:
   control: hidden
   entities:
-  - sensor.pws_alerts
+  - sensor.storm_statement
+  - sensor.tstoem_warning
+  - sensor.tornado_watch
+  - sensor.torndao_warning
+
+Pollen Forecast:
+  control: hidden
+  entities:
   - sensor.allergy_index_average_forecasted
   - sensor.allergy_index_average_historical
   - sensor.allergy_index_today
