@@ -9,7 +9,6 @@ default_view:
       - group.thermostat
       - group.garage
       - group.appliances
-      - group.weather_alerts
       - group.pollen_forecast
       - group.outside_temp
 
@@ -71,8 +70,10 @@ weather:
   icon: mdi:tree
   entities:
     - group.weather_summary
+    - group.weather_alerts
     - group.sun_and_moon
     - group.weather_forecast
+    - group.pollen_forecast
     - group.precipitation
     - group.wind 
     - group.daily_stats
@@ -241,7 +242,6 @@ Sun and Moon:
   - sensor.moon
 
 Weather Summary:
-  - climate.first_floor
   - sensor.dark_sky_summary
   - sensor.dark_sky_apparent_temperature
   - sensor.dark_sky_humidity
@@ -357,12 +357,13 @@ File Size:
 Weather Alerts:
   control: hidden
   entities:
+  - sensor.pws_alerts  
   - sensor.storm_statement
   - sensor.tstorm_warning
   - sensor.tornado_watch
   - sensor.tornado_warning
 
-Pollen Forecast:
+Pollen Alerts:
   control: hidden
   entities:
   - sensor.allergy_index_average_forecasted
