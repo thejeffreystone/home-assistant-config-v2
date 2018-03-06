@@ -61,4 +61,26 @@
     state: home
   action:
   - service: script.washer_finished_notification
+
+- alias: Get Dressed Skylar
+  trigger:
+  - platform: time
+    hours: 8
+    minutes: 0
+    seconds: 0
+  condition:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed 
+    - thu
+  - condition: state
+    entity_id: input_boolean.guest_mode
+    state: 'off'
+  action:
+  - service: tts.google_say
+    data:
+      entity_id: media_player.hass_speaker
+      message: Skylar it is time to get dressed
   
